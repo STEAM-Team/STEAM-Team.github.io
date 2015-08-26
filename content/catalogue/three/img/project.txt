@@ -1,0 +1,28 @@
+title: Catalogue
+-
+description: 
+
+
+-
+link: 
+-
+secondtitle: HUMAN+COMPUTER is an interdisciplinary workshop series focusing on transhumanism.
+-
+seconddescription: 
+
+Catalogue 1 is currently being digitized, please wait!
+
+Catalogue 2 can be viewed on issuu [here](http://issuu.com/steamteam/docs/whole_book).
+
+Catalogue 3 was given a web-native version by Ryan Mather, Barron Webster, and Skye Ray. It can be seen [here](/three).
+-
+image: 
+-
+imageposition: 
+-
+contact_name: Ryan Mather
+-
+contact_email: rmather@risd.edu
+-
+star: 
+-
