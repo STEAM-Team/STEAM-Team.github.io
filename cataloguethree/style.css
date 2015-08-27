@@ -1,0 +1,723 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*REAL STYLES BELOW*/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    font-family: CenturyOldStyle, 'Century Old Style STD', serif;
+    letter-spacing: .025em;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+a {
+    text-decoration: none;
+}
+section {
+    background-color: #fdffe1;
+    /*height: 100vh;*/
+    
+    min-height: 720px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.yes {
+    background-image: url(img/bottomleft.svg), url(img/topleft.svg), url(img/topright.svg), url(img/bottomright.svg), url(img/bottomcenter.svg), url(img/centerleft.svg), url(img/centerright.svg);
+    background-position: left bottom, left top, right top, right bottom, center bottom, left center, right center;
+    background-size: auto 60px, auto 60px, auto 60px, auto 60px, auto 20px, 20px auto, 20px auto;
+    background-repeat: no-repeat;
+}
+article {
+    padding: 80px 80px 80px 80px;
+    height: 100%;
+    width: 100%;
+}
+p {
+    line-height: 130%;
+    padding-bottom: 15px;
+    max-width: 400px;
+}
+dd {
+    float: left;
+    font-size: 18px;
+    padding: 0 0 10px 10px;
+    font-weight: normal !important;
+    line-height: 130%;
+    max-width: 80%;
+}
+dd span {
+    font-size: 18px;
+    font-style: italic;
+}
+dt {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 130%;
+}
+/*.column {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    -o-columns: 2;
+    columns: 2;
+    -webkit-column-gap: 100px;
+    -moz-column-gap: 100px;
+    -o-column-gap: 100px;
+    column-gap: 100px;
+    -webkit-column-fill: auto;
+    -moz-column-fill: auto;
+    column-fill: auto;
+    height: 90%;
+    overflow: hidden;
+}*/
+
+.pagination {
+    width: 50%;
+    font-size: 13px;
+    padding-top: 60px;
+    font-style: italic;
+}
+.chunk {
+    height: 90%;
+    /*overflow: hidden;*/
+    
+    width: 50%;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+    padding-left: 50px;
+}
+.page_numbers {
+    float: right;
+}
+.left_hand {
+    padding-right: 5vw;
+}
+a {
+    color: black;
+    transition: color .2s;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color: rgb(0, 0, 255);
+    transition: color .2s;
+}
+.caption {
+    font-style: italic;
+    font-size: 13px;
+    max-width: 450px;
+    margin-top: -15px;
+}
+.bigCaption {
+    position: relative;
+    bottom: 100%;
+    font-size: 5vw;
+    line-height: 5vw;
+    color: #fdffe1;
+    font-style: italic;
+    max-width: 80%;
+    padding: 40px;
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, .5);
+}
+h1 {
+    color: #fdffe1;
+    font-size: 9vw;
+    line-height: 120%;
+    letter-spacing: 2px;
+}
+h2 {
+    color: #fdffe1;
+    font-size: 4.5vw;
+    line-height: 120%;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    break-after: always;
+    column-break-after: always;
+    -webkit-column-break-after: always;
+    -moz-column-break-after: always;
+    -o-column-break-after: always;
+}
+h3 {
+    line-height: 120%;
+    font-size: 2.5vw;
+    color: #fdffe1;
+    padding-bottom: 30px;
+}
+h3 a {
+    color: #fdffe1 !important;
+}
+h4 {
+    font-weight: bold;
+    font-size: 2.5vw;
+    line-height: 130%;
+}
+li {
+    font-size: 2.5vw;
+    line-height: 130%;
+}
+ol {
+    break-after: always;
+    column-break-after: always;
+    -webkit-column-break-after: always;
+    -moz-column-break-after: always;
+    -o-column-break-after: always;
+}
+.break_after {
+    height: 10px;
+    break-after: always;
+    column-break-after: always;
+    -webkit-column-break-after: always;
+    -moz-column-break-after: always;
+    -o-column-break-after: always;
+}
+#cover {
+    background-color: black;
+}
+#cover article {
+    padding-bottom: 0px;
+}
+.bold {
+    font-weight: bold;
+    letter-spacing:0;
+}
+.big_number {
+    float: left;
+    height: 110px;
+    margin-right: 20px;
+}
+h5 {
+    font-size: 30px;
+    line-height: 130%;
+}
+.headline {
+    margin: 0 0 40px 120px;
+}
+.clear {
+    clear: both;
+}
+.image_hold {
+    background-color: #fdffe1;
+    width: 460px;
+    transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    -webkit-transition: background-position 1s;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: 415px auto;
+    margin-bottom: 20px;
+}
+.image_hold:hover {
+    cursor: crosshair;
+}
+.full .image_hold {
+    width: 100%;
+    height: 100%;
+    background-size: 98% auto;
+    padding: 0;
+    margin: 0;
+}
+.full {
+    height: 100%;
+}
+.full_article {
+    padding: 40px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+#one1 {
+    height: 600px;
+    background-image: url('img/1-1/yellow.png'), url('img/1-1/cyan.png'), url('img/1-1/magenta.png');
+    background-position: 45px 0, 45px 45px, 0 0;
+}
+#two1 {
+    height: 240px;
+    background-image: url('img/2-1/yellow.jpg'), url('img/2-1/cyan.jpg'), url('img/2-1/magenta.jpg'), url('img/2-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#two2 {
+    height: 220px;
+    background-image: url('img/2-2/yellow.jpg'), url('img/2-2/cyan.jpg'), url('img/2-2/magenta.jpg'), url('img/2-2/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#two3 {
+    height: 320px;
+    background-image: url('img/2-3/yellow.jpg'), url('img/2-3/cyan.jpg'), url('img/2-3/magenta.jpg'), url('img/2-3/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#two4 {
+    height: 320px;
+    background-image: url('img/2-4/yellow.jpg'), url('img/2-4/cyan.jpg'), url('img/2-4/magenta.jpg'), url('img/2-4/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#two5 {
+    height: 380px;
+    background-image: url('img/2-5/yellow.png'), url('img/2-5/cyan.png'), url('img/2-5/magenta.png'), url('img/2-5/black.png');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#three1 {
+    height: 520px;
+    background-image: url('img/3-1/yellow.jpg'), url('img/3-1/cyan.jpg'), url('img/3-1/magenta.jpg'), url('img/3-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#three2 {
+    height: 445px;
+    background-image: url('img/3-2/yellow.jpg'), url('img/3-2/cyan.jpg'), url('img/3-2/magenta.jpg'), url('img/3-2/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#three3 {
+    height: 320px;
+    background-image: url('img/3-3/yellow.jpg'), url('img/3-3/cyan.jpg'), url('img/3-3/magenta.jpg'), url('img/3-3/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#three4 {
+    background-image: url('img/3-4/yellow.jpg'), url('img/3-4/cyan.jpg'), url('img/3-4/magenta.jpg'), url('img/3-4/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#four1 {
+    height: 340px;
+    background-image: url('img/4-1/yellow.jpg'), url('img/4-1/cyan.jpg'), url('img/4-1/magenta.jpg'), url('img/4-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#four2 {
+    height: 340px;
+    background-image: url('img/4-2/yellow.jpg'), url('img/4-2/cyan.jpg'), url('img/4-2/magenta.jpg'), url('img/4-2/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#seven1 {
+    height: 310px;
+    background-image: url('img/7-1/yellow.jpg'), url('img/7-1/cyan.jpg'), url('img/7-1/magenta.jpg'), url('img/7-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#seven2 {
+    height: 310px;
+    background-image: url('img/7-2/yellow.jpg'), url('img/7-2/cyan.jpg'), url('img/7-2/magenta.jpg'), url('img/7-2/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#seven3 {
+    height: 310px;
+    background-image: url('img/7-3/yellow.jpg'), url('img/7-3/cyan.jpg'), url('img/7-3/magenta.jpg'), url('img/7-3/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#ten1 {
+    height: 510px;
+    background-image: url('img/10-1/yellow.jpg'), url('img/10-1/cyan.jpg'), url('img/10-1/magenta.jpg'), url('img/10-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#ten2 {
+    height: 300px;
+    background-image: url('img/10-2/yellow.jpg'), url('img/10-2/cyan.jpg'), url('img/10-2/magenta.jpg'), url('img/10-2/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#ten3 {
+    height: 520px;
+    background-image: url('img/10-3/yellow.jpg'), url('img/10-3/cyan.jpg'), url('img/10-3/magenta.jpg'), url('img/10-3/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#ten4 {
+    background-image: url('img/10-4/yellow.jpg'), url('img/10-4/cyan.jpg'), url('img/10-4/magenta.jpg'), url('img/10-4/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#eleven1 {
+    height: 330px;
+    background-image: url('img/11-1/yellow.jpg'), url('img/11-1/cyan.jpg'), url('img/11-1/magenta.jpg'), url('img/11-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#eleven2 {
+    height: 240px;
+    background-image: url('img/11-2/yellow.jpg'), url('img/11-2/cyan.jpg'), url('img/11-2/magenta.jpg'), url('img/11-2/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#eleven3 {
+    height: 240px;
+    background-image: url('img/11-3/yellow.jpg'), url('img/11-3/cyan.jpg'), url('img/11-3/magenta.jpg'), url('img/11-3/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#eleven4 {
+    height: 200px;
+    background-image: url('img/11-4/yellow.jpg'), url('img/11-4/cyan.jpg'), url('img/11-4/magenta.jpg'), url('img/11-4/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#eleven5 {
+    height: 270px;
+    background-image: url('img/11-5/yellow.jpg'), url('img/11-5/cyan.jpg'), url('img/11-5/magenta.jpg'), url('img/11-5/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#eleven6 {
+    height: 220px;
+    background-image: url('img/11-6/yellow.jpg'), url('img/11-6/cyan.jpg'), url('img/11-6/magenta.jpg'), url('img/11-6/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#twelve1 {
+    height: 750px;
+    background-image: url('img/12-1/yellow.png'), url('img/12-1/cyan.png'), url('img/12-1/magenta.png');
+    background-position: 45px 0, 45px 45px, 0 0;
+}
+#thirteen1 {
+    height: 340px;
+    background-image: url('img/13-1/yellow.jpg'), url('img/13-1/cyan.jpg'), url('img/13-1/magenta.jpg'), url('img/13-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#thirteen2 {
+    height: 340px;
+    background-image: url('img/13-2/yellow.jpg'), url('img/13-2/cyan.jpg'), url('img/13-2/magenta.jpg'), url('img/13-2/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#fourteen1 {
+    height: 415px;
+    background-image: url('img/14-1/yellow.jpg'), url('img/14-1/cyan.jpg'), url('img/14-1/magenta.jpg'), url('img/14-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#fifteen1 {
+    height: 240px;
+    background-image: url('img/15-1/yellow.jpg'), url('img/15-1/cyan.jpg'), url('img/15-1/magenta.jpg'), url('img/15-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#fifteen2 {
+    height: 345px;
+    background-image: url('img/15-2/yellow.jpg'), url('img/15-2/cyan.jpg'), url('img/15-2/magenta.jpg'), url('img/15-2/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#sixteen1 {
+    height: 450px;
+    background-image: url('img/16-1/yellow.jpg'), url('img/16-1/cyan.jpg'), url('img/16-1/magenta.jpg'), url('img/16-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#sixteen2 {
+    height: 345px;
+    background-image: url('img/16-2/yellow.jpg'), url('img/16-2/cyan.jpg'), url('img/16-2/magenta.jpg'), url('img/16-2/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#seventeen1 {
+    height: 270px;
+    background-image: url('img/17-1/yellow.jpg'), url('img/17-1/cyan.jpg'), url('img/17-1/magenta.jpg'), url('img/17-1/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#seventeen2 {
+    height: 310px;
+    background-image: url('img/17-2/yellow.jpg'), url('img/17-2/cyan.jpg'), url('img/17-2/magenta.jpg'), url('img/17-2/black.jpg');
+    background-position: 25px 0, 25px 25px, 0 0, 0 25px;
+}
+#two1:hover, #two1:active, #two2:hover, #two3:hover, #two4:hover, #two5:hover, #three1:hover, #three2:hover, #three3:hover, #four1:hover, #four2:hover, #seven1:hover, #seven2:hover, #seven3:hover, #ten1:hover, #ten2:hover, #ten3:hover, #eleven1:hover, #eleven2:hover, #eleven3:hover, #eleven4:hover, #eleven5:hover, #eleven6:hover, #thirteen1:hover, #thirteen2:hover, #fourteen1:hover, #fifteen1:hover, #fifteen2:hover, #sixteen1:hover, #sixteen2:hover, #seventeen1:hover, #seventeen2:hover {
+    background-position: 0 0;
+    transition: background-position 1.5s ;
+    -moz-transition: background-position 1.5s ;
+    -webkit-transition: background-position 1.5s ;
+}
+#one1:hover, #three4:hover, #ten4:hover, #twelve1:hover {
+    background-position: 13px 13px;
+    transition: background-position 1.5s 0;
+    -moz-transition: background-position 1.5s 0;
+    -webkit-transition: background-position 1.5s 0;
+}
+img {
+    max-width: 420px;
+    padding-bottom: 10px;
+    display: inline;
+}
+.full img {
+    max-width: 100%;
+}
+.show_mobile {
+    display: none;
+}
+#gif {
+    height: 100%;
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 10rem;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*------------*/
+/*--------*/
+/*----*/
+/*MEDIA QUERIES AFTER THIS!!!*/
+/*----*/
+/*-------*/
+@media screen and (min-width: 801px) {
+    section {
+        height: 100vh;
+    }
+    .fourtwenty {
+        max-width: 420px;
+    }
+    .fourfifteen {
+        max-width: 415px;
+    }
+    .fourten {
+        max-width: 410px;
+    }
+    .fourfive {
+        max-width: 405px;
+    }
+    .threeeightfive {
+        max-width: 385px;
+    }
+}
+@media screen and (max-width: 1080px) {
+    body {
+        width: 1080px;
+    }
+}
+@media screen and (max-width: 800px) {
+    /*end*/
+    
+    .half {
+        width: 100%;
+    }
+    .hide_mobile {
+        display: none;
+    }
+    .show_mobile {
+        display: inline;
+    }
+    .chunk {
+        width: 100%;
+        min-height: 100%;
+    }
+    .left {
+        float: none;
+    }
+    .right {
+        float: none;
+        padding: 0;
+    }
+    /* .column {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -o-column-count: 1;
+        column-count: 1;
+        min-height: 100%;
+    }*/
+    
+    section {
+        max-height: 100%;
+        min-height: 0;
+    }
+    article {
+        min-height: 0;
+    }
+    p {
+        max-width: 80%;
+    }
+    h1 {
+        font-size: 20vw;
+    }
+    h2 {
+        font-size: 10vw;
+    }
+    h3, h4 {
+        font-size: 7.5vw;
+    }
+    li, dd, dt {
+        font-size: 5vw;
+    }
+    .pagination {
+        display: none;
+    }
+    body, section {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    h5 {
+        font-size: 5vw;
+    }
+    #cover article {
+        padding-bottom: 50px;
+    }
+    #granoff {
+        background-position: 5px 0, 5px 5px, 0 0, 0 5px;
+    }
+    .full .image_hold {
+        width: 100%;
+        height: 500px;
+        background-size: 95% auto;
+        padding: 0;
+        margin: 0;
+    }
+    .no article {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .yes {
+        background-image: none;
+    }
+    #gif{height: 400px;}
+}
+@media screen and (max-width: 640px) {
+    /*end*/
+    
+    article {
+        padding: 20px;
+    }
+    p {
+        max-width: 100%;
+    }
+    .image_hold {
+        width: 400px;
+        background-size: 290px auto;
+    }
+    .text_img {
+        max-width: 100%;
+    }
+    #one1 {
+        height: 400px;
+    }
+    #two1 {
+        height: 190px;
+    }
+    #two2 {
+        height: 170px;
+    }
+    #two3 {
+        height: 220px;
+    }
+    #two4 {
+        height: 320px;
+    }
+    #two5 {
+        height: 280px;
+    }
+    #three1 {
+        height: 380px;
+    }
+    #three2 {
+        height: 330px;
+    }
+    #three3 {
+        height: 230px;
+    }
+    #three4 {
+        height: 340px;
+    }
+    #four1 {
+        height: 260px;
+    }
+    #four2 {
+        height: 260px;
+    }
+    #seven1 {
+        height: 230px;
+        margin-top: 100px;
+    }
+    #seven2 {
+        height: 230px;
+    }
+    #seven3 {
+        height: 230px;
+    }
+    #ten1 {
+        height: 340px;
+    }
+    #ten2 {
+        height: 240px;
+    }
+    #ten3 {
+        height: 380px;
+    }
+    #ten4 {
+        height: 400px;
+    }
+    #eleven1 {
+        height: 280px;
+    }
+    #eleven2 {
+        height: 200px;
+    }
+    #eleven3 {
+        height: 200px;
+    }
+    #eleven4 {
+        height: 170px;
+    }
+    #eleven5 {
+        height: 230px;
+    }
+    #eleven6 {
+        height: 360px;
+    }
+    #twelve1 {
+        height: 220px;
+    }
+    #thirteen1 {
+        height: 240px;
+    }
+    #thirteen2 {
+        height: 350px;
+    }
+    #fourteen1 {
+        height: 295px;
+    }
+    #fifteen1 {
+        height: 180px;
+    }
+    #fifteen2 {
+        height: 250px;
+    }
+    #sixteen1 {
+        height: 360px;
+    }
+    #sixteen2 {
+        height: 180px;
+    }
+    #seventeen1 {
+        height: 200px;
+    }
+    #seventeen2 {
+        height: 230px;
+    }
+
+}
