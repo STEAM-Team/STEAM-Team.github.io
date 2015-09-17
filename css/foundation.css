@@ -1565,6 +1565,10 @@ a {
     color: #0078a0; }
   a img {
     border: none; }
+    
+.mainSTEAM a {
+  background: #fffd79;
+  }
 
 /* Default paragraph styles */
 p {
