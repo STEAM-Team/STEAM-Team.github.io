@@ -1,3 +1,10 @@
+::selection {
+  background: #ffd6d9; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffd6d9; /* Gecko Browsers */
+}
+
 .STEAM {
 	position:fixed;
 	top:44px;
@@ -109,6 +116,10 @@
 #clubs td{
   height: 25px;
   vertical-align: middle;
+}
+
+#clubs p {
+  margin-bottom: -1px;
 }
 
 #BrownSTEAM td div{
