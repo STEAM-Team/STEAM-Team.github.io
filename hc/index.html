@@ -1,0 +1,323 @@
+<html>
+    <head>
+
+        <!--
+            add sponsorship images
+        -->
+
+        <title>HUMAN+COMPUTER // STEAM</title>
+        <link rel="stylesheet" href="hc.css" />
+        <link href="css/lightbox.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css' />
+
+        <link rel="shortcut icon" href="generic_favicon.ico" type="image/x-icon" />
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-46633079-1', 'steamwith.us');
+            ga('send', 'pageview');
+
+        </script>
+
+        <script type="text/javascript">
+
+            //(function(){var b,d,c;b=jQuery;c=(function(){function b(){this.fadeDuration=500;this.fitImagesInViewport=true;this.resizeDuration=700;this.showImageNumberLabel=true;this.wrapAround=false}b.prototype.albumLabel=function(b,c){return"Image "+b+" of "+c};return b})();d=(function(){function c(b){this.options=b;this.album=[];this.currentImageIndex=void 0;this.init()}c.prototype.init=function(){this.enable();return this.build()};c.prototype.enable=function(){var c=this;return b('body').on('click','a[rel^=lightbox], area[rel^=lightbox], a[data-lightbox], area[data-lightbox]',function(d){c.start(b(d.currentTarget));return false})};c.prototype.build=function(){var c=this;b("<div id='lightboxOverlay' class='lightboxOverlay'></div><div id='lightbox' class='lightbox'><div class='lb-outerContainer'><div class='lb-container'><img class='lb-image' src='' /><div class='lb-nav'><a class='lb-prev' href='' ></a><a class='lb-next' href='' ></a></div><div class='lb-loader'><a class='lb-cancel'></a></div></div></div><div class='lb-dataContainer'><div class='lb-data'><div class='lb-details'><span class='lb-caption'></span><span class='lb-number'></span></div><div class='lb-closeContainer'><a class='lb-close'></a></div></div></div></div>").appendTo(b('body'));this.$lightbox=b('#lightbox');this.$overlay=b('#lightboxOverlay');this.$outerContainer=this.$lightbox.find('.lb-outerContainer');this.$container=this.$lightbox.find('.lb-container');this.containerTopPadding=parseInt(this.$container.css('padding-top'),10);this.containerRightPadding=parseInt(this.$container.css('padding-right'),10);this.containerBottomPadding=parseInt(this.$container.css('padding-bottom'),10);this.containerLeftPadding=parseInt(this.$container.css('padding-left'),10);this.$overlay.hide().on('click',function(){c.end();return false});this.$lightbox.hide().on('click',function(d){if(b(d.target).attr('id')==='lightbox'){c.end()}return false});this.$outerContainer.on('click',function(d){if(b(d.target).attr('id')==='lightbox'){c.end()}return false});this.$lightbox.find('.lb-prev').on('click',function(){if(c.currentImageIndex===0){c.changeImage(c.album.length-1)}else{c.changeImage(c.currentImageIndex-1)}return false});this.$lightbox.find('.lb-next').on('click',function(){if(c.currentImageIndex===c.album.length-1){c.changeImage(0)}else{c.changeImage(c.currentImageIndex+1)}return false});return this.$lightbox.find('.lb-loader, .lb-close').on('click',function(){c.end();return false})};c.prototype.start=function(c){var f,e,j,d,g,n,o,k,l,m,p,h,i;b(window).on("resize",this.sizeOverlay);b('select, object, embed').css({visibility:"hidden"});this.$overlay.width(b(document).width()).height(b(document).height()).fadeIn(this.options.fadeDuration);this.album=[];g=0;j=c.attr('data-lightbox');if(j){h=b(c.prop("tagName")+'[data-lightbox="'+j+'"]');for(d=k=0,m=h.length;k<m;d=++k){e=h[d];this.album.push({link:b(e).attr('href'),title:b(e).attr('title')});if(b(e).attr('href')===c.attr('href')){g=d}}}else{if(c.attr('rel')==='lightbox'){this.album.push({link:c.attr('href'),title:c.attr('title')})}else{i=b(c.prop("tagName")+'[rel="'+c.attr('rel')+'"]');for(d=l=0,p=i.length;l<p;d=++l){e=i[d];this.album.push({link:b(e).attr('href'),title:b(e).attr('title')});if(b(e).attr('href')===c.attr('href')){g=d}}}}f=b(window);o=f.scrollTop()+f.height()/10;n=f.scrollLeft();this.$lightbox.css({top:o+'px',left:n+'px'}).fadeIn(this.options.fadeDuration);this.changeImage(g)};c.prototype.changeImage=function(f){var d,c,e=this;this.disableKeyboardNav();d=this.$lightbox.find('.lb-image');this.sizeOverlay();this.$overlay.fadeIn(this.options.fadeDuration);b('.lb-loader').fadeIn('slow');this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();this.$outerContainer.addClass('animating');c=new Image();c.onload=function(){var m,g,h,i,j,k,l;d.attr('src',e.album[f].link);m=b(c);d.width(c.width);d.height(c.height);if(e.options.fitImagesInViewport){l=b(window).width();k=b(window).height();j=l-e.containerLeftPadding-e.containerRightPadding-20;i=k-e.containerTopPadding-e.containerBottomPadding-110;if((c.width>j)||(c.height>i)){if((c.width/j)>(c.height/i)){h=j;g=parseInt(c.height/(c.width/h),10);d.width(h);d.height(g)}else{g=i;h=parseInt(c.width/(c.height/g),10);d.width(h);d.height(g)}}}return e.sizeContainer(d.width(),d.height())};c.src=this.album[f].link;this.currentImageIndex=f};c.prototype.sizeOverlay=function(){return b('#lightboxOverlay').width(b(document).width()).height(b(document).height())};c.prototype.sizeContainer=function(f,g){var b,d,e,h,c=this;h=this.$outerContainer.outerWidth();e=this.$outerContainer.outerHeight();d=f+this.containerLeftPadding+this.containerRightPadding;b=g+this.containerTopPadding+this.containerBottomPadding;this.$outerContainer.animate({width:d,height:b},this.options.resizeDuration,'swing');setTimeout(function(){c.$lightbox.find('.lb-dataContainer').width(d);c.$lightbox.find('.lb-prevLink').height(b);c.$lightbox.find('.lb-nextLink').height(b);c.showImage()},this.options.resizeDuration)};c.prototype.showImage=function(){this.$lightbox.find('.lb-loader').hide();this.$lightbox.find('.lb-image').fadeIn('slow');this.updateNav();this.updateDetails();this.preloadNeighboringImages();this.enableKeyboardNav()};c.prototype.updateNav=function(){this.$lightbox.find('.lb-nav').show();if(this.album.length>1){if(this.options.wrapAround){this.$lightbox.find('.lb-prev, .lb-next').show()}else{if(this.currentImageIndex>0){this.$lightbox.find('.lb-prev').show()}if(this.currentImageIndex<this.album.length-1){this.$lightbox.find('.lb-next').show()}}}};c.prototype.updateDetails=function(){var b=this;if(typeof this.album[this.currentImageIndex].title!=='undefined'&&this.album[this.currentImageIndex].title!==""){this.$lightbox.find('.lb-caption').html(this.album[this.currentImageIndex].title).fadeIn('fast')}if(this.album.length>1&&this.options.showImageNumberLabel){this.$lightbox.find('.lb-number').text(this.options.albumLabel(this.currentImageIndex+1,this.album.length)).fadeIn('fast')}else{this.$lightbox.find('.lb-number').hide()}this.$outerContainer.removeClass('animating');this.$lightbox.find('.lb-dataContainer').fadeIn(this.resizeDuration,function(){return b.sizeOverlay()})};c.prototype.preloadNeighboringImages=function(){var c,b;if(this.album.length>this.currentImageIndex+1){c=new Image();c.src=this.album[this.currentImageIndex+1].link}if(this.currentImageIndex>0){b=new Image();b.src=this.album[this.currentImageIndex-1].link}};c.prototype.enableKeyboardNav=function(){b(document).on('keyup.keyboard',b.proxy(this.keyboardAction,this))};c.prototype.disableKeyboardNav=function(){b(document).off('.keyboard')};c.prototype.keyboardAction=function(g){var d,e,f,c,b;d=27;e=37;f=39;b=g.keyCode;c=String.fromCharCode(b).toLowerCase();if(b===d||c.match(/x|o|c/)){this.end()}else if(c==='p'||b===e){if(this.currentImageIndex!==0){this.changeImage(this.currentImageIndex-1)}}else if(c==='n'||b===f){if(this.currentImageIndex!==this.album.length-1){this.changeImage(this.currentImageIndex+1)}}};c.prototype.end=function(){this.disableKeyboardNav();b(window).off("resize",this.sizeOverlay);this.$lightbox.fadeOut(this.options.fadeDuration);this.$overlay.fadeOut(this.options.fadeDuration);return b('select, object, embed').css({visibility:"visible"})};return c})();b(function(){var e,b;b=new c();return e=new d(b)})}).call(this);
+
+            $(document).ready(function(){
+
+                $("#nav2").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#about").offset().top - 45
+                    }, 800);
+                });
+
+                $("#nav3").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#resources").offset().top - 45
+                    }, 800);
+                });
+                $("#nav4").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#log").offset().top - 45
+                    }, 800);
+                });
+                $("#nav5").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#contact").offset().top - 45
+                    }, 800);
+                });
+                $(".logo").click(function() {
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 1000);
+                });
+
+                $("#description_1_link").click(function() {
+                    $("#description_1").toggle(800);
+                });
+                $("#description_2_link").click(function() {
+                    $("#description_2").toggle(800);
+                });
+                $("#description_3_link").click(function() {
+                    $("#description_3").toggle(800);
+                });
+                $("#description_4_link").click(function() {
+                    $("#description_4").toggle(800);
+                });
+
+                //$(document).scroll(function() {
+                //    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                //    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                //    if (scrollTop > (showPoint)) { //when we reach showPoint
+                //        $("#logo_small").show("slow"); //show
+                //    } else {
+                //        $("#logo_small").hide("slow"); // else hide
+                //    }
+                //});
+
+
+                $(document).scroll(function() {
+                    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                    if(scrollTop > showPoint+50) {
+                        //$('#logo_small').animate({left: 20},500);
+                        $('#logo_small').fadeIn();
+                        //$('#logo_small').animate({
+                        //top: "100"
+                        //},800);
+                    } else {
+                        //$('#logo_small').animate({left: -100},500);
+                        $('#logo_small').fadeOut();
+                        //$('#logo_small').animate({
+                        //top: "-20"
+                        //},800);
+                    }
+
+                });
+
+            });
+        </script>
+        <script src="js/lightbox.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="nav">
+            <a id="nav1" href="http://steamwith.us">steam</a> <h6>/</h6> <a id="nav2" href="#">about</a> <h6>/</h6> <a id="nav4" href="#">log</a> <h6>/<!--&#8967; &#11040;--></h6> <a id="nav3" href="#">resources</a> <h6>/</h6> <a id="nav5" href="#">contact</a>
+        </div>
+
+        <div id="intro">
+            <h1><p style="background: rgba(0,0,0,0);"><span style="color: white; background: black; padding: 4px; line-height: 55px;">HUMAN+COMPUTER is an interdisciplinary workshop series focusing on transhumanism.</span></p></h1>
+        </div>
+
+
+        <div class="content">
+
+            <div class="chunk_a" id="about">
+                <h2>HUMAN+COMPUTER</h2>
+                <p>Transhumanism is the belief that the human race can evolve beyond its current limitations through the use of science and technology. However, will our accelerating transformation into cyborgs be a form of transcendence or are we building our own prisons of technology?</p>
+
+                <p>This class will combine the design of new body/machine interfaces with learning relevant technical skills in electronics, digital fabrication, and programming. With a focus on building wearable devices, human augmentation, and alternative, more visceral forms of communication, students from MIT, Brown, and RISD will work in groups to conceptualize, prototype, and finally build functioning versions of their ideas in whatever form they will take. Students will read related science fiction short stories and theory readings and be introduced to work within the fields of critical and speculative design as well as recent developments within the field of human computer interaction. In particular, students will learn to use the Arduino GSM Shield, which allows for the simple creation of functioning cell phones, and be introduced to digital fabrication processes like lasercutting and 3d printing, all the while staying in touch with fine art processes such as printmaking and casting. The culmination of the course will be an exhibition of the student work in Expose, RISD's student-run gallery.</p>
+
+                <p>HUMAN+COMPUTER is open to RISD/Brown and MIT undergraduate and graduate students in any department, for free! Students are encouraged to form partnerships at the end of the first day with students from the other school(s), and to work collaboratively. This is a non-credit bearing class, just a workshop series for your own personal fulfillment. The workshop series will be rigorous, though. We think it's very possible to make some very compelling work together for the show in February!</p>
+            </div>
+
+            <div class="chunk_a" id="log">
+                <h2>Week One</h2>
+            </div>
+            <div class="media_box">
+                <a href="one/1.JPG" title=""><img src="one/1.JPG" /></a>
+                <a href="one/2.JPG" title=""><img src="one/2.JPG" /></a>
+                <a href="one/3.JPG" title=""><img src="one/3.JPG" /></a>
+                <a href="one/4.JPG" title=""><img src="one/4.JPG" /></a>
+                <a href="one/5.JPG" title=""><img src="one/5.JPG" /></a>
+                <a href="one/6.JPG" title=""><img src="one/6.JPG" /></a>
+                <a href="one/8.JPG" title=""><img src="one/8.JPG" /></a>
+
+            </div>
+
+            <!-- content end and begin ??? -->
+            <div class="chunk_a">
+                <p>To kick off H+C, on Saturday, January 14 students from RISD, Brown, and MIT descended on MIT&#8217;s Media lab to participate in the first of four workshops in a series called <a href="http://steamwith.us/hc" target="_blank"><strong>Human + Computer</strong></a>. The workshop series is facilitated by three media lab graduate students, <a href="http://web.media.mit.edu/~mellis/index.html" target="_blank">David Mellis</a>, <a href="http://www.sophiabrueckner.com/" target="_blank">Sophia Brueckner</a>, and <a href="http://web.mit.edu/ttseng/www/index.html" target="_blank">Tiffany Tseng</a>, as well as our own <a href="http://ryanflomerfelt.com/" target="_blank">Ryan Flomerfelt Mather</a>, who conceived of the workshop as a case study on art-science collaboration, and interdisciplinary learning.</p>
+                <p>
+                    Click <a id="description_1_link" href="#description_1_link">here</a> for more...<br />
+                </p>
+                <p><em>Images Courtesy of <a href="http://jenniferkwack.com" target="_blank">Jennifer Kwack</a></em></p>
+                <span id="description_1" style="display: none">
+                    <p>We started the day off by talking about precedent work and the theme of the workshop - transhumanism. For those who aren&#8217;t familiar, transhumanism is the belief that humans can use tech to surpass their biological selves physically, emotionally, etc. This is a complex issue for the day we are in as issues of privacy and ethical use of data are brought up.</p>
+                    <p>After this discussion, Sophia led an exercise wherein students wrote miniature science fiction stories that talked about transhumanist technologies. Melody Cao (RISD/Brown &#8216;16) and Kate O&#8217;Connor (MIT &#8216;14) wrote a humorous story about a patient who had just been implanted with a language acquisition implant which, although unpleasantly metallic tasting at first, allowed the wearer to acquire new languages rapidly.</p>
+                    <p>A common thread through the other stories was love. One story addressed the issue of how romantic relationships are complicated when one of the people involved is more heavily android than the other. How much would it take to let your significant other read your every thought? or control your body remotely?</p>
+                    <p>After this conceptual exercise, we ate lunch and moved on to something more making-intensive. David led us on a journey of how to install and run his new <a href="http://web.media.mit.edu/~mellis/gsm/" target="_blank">cell phone module</a> that is compatible with Arduino. This unique access to David&#8217;s tool will allow students to make communication devices and works of art that can communicate in real time, with real phones.</p>
+                    <p>After making a few calls and texts with the cell phone modules, Ryan told the students about the resources available to them, including TA hours throughout the week and their own budgets to purchase materials with. Tiffany walked the students through the project documentation system that they are asked to use that she designed herself called <a href="http://buildinprogress.herokuapp.com/" target="_blank">Build In Progress</a>.</p>
+                    <p>Next, the students nucleated into groups and swapped phone numbers. Can&#8217;t wait to see what they are able to come up with for next week. Make sure to check back next week to see what the participants cook up.</p>
+                </span>
+            </div>
+
+            <div class="chunk_a">
+                <h2>Week Two</h2>
+            </div>
+            <div class="media_box">
+                <a href="two/2.png" title=""><img src="two/2.png" /></a>
+                <a href="two/3.jpg" title=""><img src="two/3.jpg" /></a>
+                <a href="two/4.jpg" title=""><img src="two/4.jpg" /></a>
+                <a href="two/5.jpg" title=""><img src="two/5.jpg" /></a>
+                <a href="two/6.jpg" title=""><img src="two/6.jpg" /></a>
+                <a href="two/1.png" title=""><img src="two/1.png" /></a>
+                <a href="two/7.jpg" title=""><img src="two/7.jpg" /></a>
+
+            </div>
+
+            <div class="chunk_a">
+
+                <p>On January 18th, students from Brown, RISD, and MIT convened at RISD&#8217;s <a href="http://naturelab.risd.edu/" target="_blank">Edna Lawrence Nature Lab</a> for the second meeting of <a href="http://steamwith.us/hc" target="_blank">Human + Computer</a> | Wintersession and IAP Workshop Series.</p>
+                <p>The day started off with a critique of the work that the participants had prepared in the first week. Participants showed off videos of the proposed interaction, prototypes of the electronic functionality, a fabrication strategy, and a other process work.</p>
+                <p>
+                    Click <a id="description_2_link" href="#description_2_link">here</a> for more...<br />
+                </p>
+                <p><em>Images Courtesy of <a href="http://jenniferkwack.com" target="_blank">Jennifer Kwack</a></em></p>
+
+                <span id="description_2" style="display: none">
+                <p>Cynthia Liu (RISD Grad &#8216;15), Daniel Goodman (MIT Grad &#8216;15) and Alice Huang&#8217;s (MIT &#8216;15) group showed off a three axis robotic arm that can move along a cartesian coordinate system that is controlled by sensors in one&#8217;s shoe. The team was challenged by the facilitators to focus on the depth of story telling that the piece could invoke by either honing in on a specific scenario, or completely decontextualizing it and allowing the gallery visitor to feel for them self the awkwardness of wearing a new limb, and the eeriness of its absence afterwards.</p>
+                <p>A focus on storytelling was a common thread throughout the feedback that groups got back. Joshua Bohar (RISD Grad &#8216;15), Abubakar Abid (MIT &#8216;15) and James Hobin&#8217;s (MIT &#8216;16) group is developing a system that tracks brainwave activity and communicates that data to the person wearing a cap. The group was inspired by the Matrix-esque vision of the project, and suggested that the group focus on communicating the implications of a hypothetical world in which this technology was commonplace, or go the other direction completely and focus on the haptic communication of sensory data. More information about the projects and their process can be found at the Build in Progress <a href="http://buildinprogress.herokuapp.com/collections/12" target="_blank">Collection</a> featuring all of the work from Human + Computer.</p>
+                <p>During lunchtime, the group took a walk over to Expos&eacute;, RISD&#8217;s student run gallery. This is where the show of the same name will be held, featuring work from the workshop series and work from the RISD, Brown, and MIT communities at large. Students measured the lengths of walls and jotted down notes about how they might display their work in the final show.</p>
+                <p>In the afternoon, the facilitators ran through an overview of construction methods and design tools to help the participants identify the best workflow to realize their project.</p>
+                <p>After that, everyone walked up to the nature lab to inspect objects from nature and identify qualities of nature lab objects that could lend inspiration to their projects. Alex Czulak (Brown Grad &#8216;15) discovered that the shape of a shell fit snugly in his ear, where his partner Evan Brooks (RISD &#8216;13) and him plan to place a device that subtly shares heart rate information socially.</p>
+                <p>The participants ended the day with some food for thought on where to take their projects and excitement for the weeks to come. Check back again next week to see what we&#8217;ve been up to.</p>
+                <p>Submissions for the Human + Computer show are now open! Submit work that relates to transhumanism, human computer interaction, or technology's effect on human relationships. E-mail 3-5 images of the work with a short description of the work and of your process to info@risdsteam.org by February 5th.</p>
+                </span>
+            </div>
+
+            <div class="chunk_a">
+                <h2>Week Three</h2>
+            </div>
+            <div class="media_box">
+                <a href="thr/1.jpg" title=""><img src="thr/1.jpg" /></a>
+                <a href="thr/2.jpg" title=""><img src="thr/2.jpg" /></a>
+                <a href="thr/3.jpg" title=""><img src="thr/3.jpg" /></a>
+                <a href="thr/4.jpg" title=""><img src="thr/4.jpg" /></a>
+                <a href="thr/5.jpg" title=""><img src="thr/5.jpg" /></a>
+                <a href="thr/6.jpg" title=""><img src="thr/6.jpg" /></a>
+                <a href="thr/7.jpg" title=""><img src="thr/7.jpg" /></a>
+
+            </div>
+
+            <div class="chunk_a">
+                <p>This past Saturday, January 25th, participants in the Human + Computer workshop series reconvened at the MIT Media Lab for its third installment. The morning was filled with an impassioned critique of the students projects.</p>
+                <p>The groups presented impressive progress, and suggested plans for their implementation and presentation for the show that the work will be featured in. Evan Brooks (RISD '13) and Alex Czulak (Brown '15) showed off a slew of 3D printed prototypes for a wearable device that allows the user to communicate their heart rate to a special someone. The prototype was compelling, but the proposal for how the team might tell the embedded story of the work was equally as thought provoking. How might advertisements for this look in the future? Would the TSA require you to take off your heart rate monitors so as not to interfere with wireless communications - or much worse - distract the pilot?</p>
+                <p>
+                    Click <a id="description_3_link" href="#description_3_link">here</a> for more...<br />
+                </p>
+                <p><em>Images Courtesy of <a href="http://jenniferkwack.com" target="_blank">Jennifer Kwack</a></em></p>
+
+                <span id="description_3" style="display: none">
+                    <p>How the work will be presented in a gallery setting was a commonality that spanned the critique. Alex Ju (RISD '16) and Kate O'Connor (MIT '13) presented promising progress on a nitinol activated smart-textile composed of laser-cut butterflies, based on an a Japanese Fable. Sophia Brueckner pointed out that this work would benefit from a dramatic video that explained theoretical use cases and the sense of wonder that the piece could ignite.</p>
+                    <p>We were delighted to have some guests visit us during the morning and lend their critical eye. Ian Gonsher, a Professor at Brown University came along with Prat Ganapathy, a designer from IDEO with whom he collaborates. Ian said that he was really impressed with the outcomes of just two weeks of work, and offered some very helpful feedback. Prat also offered some great input, advising the "third arm" group to consider how their work might offer either a totally serious benefit (amputees) or an incredibly goofy one (scratching one's back). We were also joined by Xiao Xiao, a PhD student at the Media Lab who contributed to the critique.</p>
+                    <p>In the afternoon, we broke out into workshops clustered around specific needs of the groups. Sophia Brueckner's workshop focused on coding in processing, and David Mellis' was centered around the building of robust electronics pre-empting the abuse that the projects will no-doubt endure during the opening. Tiffany Tseng's workshop showed participants the basics of using a laser cutter, and Ryan Mather taught students how to sew and incorporate electronic components into different seam constructions. These workshops put some practical skills in the hands of the participants to help them implement their work in the final week of construction.</p>
+                    <p>The day finished off with some quality team time and "desk crits" as the facilitators walked around offering their advice. Ryan helped Alex and Evan trouble shoot a heart-rate sensor, while David advised on some of the communications issues that were going on with the Arduino.</p>
+                    <p>This Saturday, the group will get together for the last time before the opening at 204 Westminster st. Providence, RI on February 15th at 7p.m. We hope you will be able to come down and see what promises to be a very compelling body of work! Check back this time next week to see how the work turned out and hear more details about the upcoming show.</p>
+                    <p>Submissions for the Human + Computer show are open! Submit work that relates to transhumanism, human computer interaction, or technology's effect on human relationships. E-mail 3-5 images of the work with a short description of the work and of your process to info@steamwith.us by February 5th.</p>
+                </span>
+            </div>
+
+            <div class="chunk_a">
+                <h2>Week Four</h2>
+            </div>
+            <div class="media_box">
+                <a href="for/1.jpg" title=""><img src="for/1.jpg" /></a>
+                <a href="for/2.jpg" title=""><img src="for/2.jpg" /></a>
+                <a href="for/3.jpg" title=""><img src="for/3.jpg" /></a>
+                <a href="for/4.jpg" title=""><img src="for/4.jpg" /></a>
+                <a href="for/5.jpg" title=""><img src="for/5.jpg" /></a>
+                <a href="for/6.jpg" title=""><img src="for/6.jpg" /></a>
+                <a href="for/7.jpg" title=""><img src="for/7.jpg" /></a>
+
+            </div>
+
+            <div class="chunk_a">
+                <p>We were all blown away by the final critique of Human + Computer last Saturday which was hosted at RISD E&#8217;ship&#8217;s space at 204 Westminster st. This was the culmination of three weeks of hard work done by students from MIT, RISD, and Brown. We were fortunate to have <a href="http://www.risd.edu/Digital___Media/Kelly_Dobson/" target="_blank">Kelly Dobson</a>, Department head of Digital + Media at RISD, <a href="http://showstudio.com/contributor/lisa_z_morgan" target="_blank">Lisa Z. Morgan</a>, author, designer, and founder of Strumpet &amp; Pink, and Kimberly Young, a local dance artist.</p>
+                <p>
+                    Click <a id="description_4_link" href="#description_4_link">here</a> for more...<br />
+                </p>
+                <p><em>Images Courtesy of <a href="http://jenniferkwack.com" target="_blank">Jennifer Kwack</a> and <a href="http://ryanflomerfelt.com">Ryan Mather</a></em></p>
+
+                <span id="description_4" style="display: none">
+                    <p>The first group to present their work showed us a wearable device that can wirelessly transmit one&#8217;s heart rate to a special someone from across the world away. Evan Brooks (RISD &#8216;14) and his partner Alex Czulak (Brown &#8216;15) showed us a parody TSA video that explained how the devices could be used to identify irregular activity in the security areas, to better find perpetrators. They also screened a facebook-esque advertisement that together with the prototypes immersed us in a world where these devices would be commonplace.</p>
+                    <p>The next work, presented by Celine Chappert (RISD &#8216;14) and Bevin Kelley (Brown &#8216;14), was an equally immersive installation piece. Chappert remarked that technology interfaces with us visually, but rarely interacts with our bodies. Their piece is a space wherein aural, visual, and tactile senses are all in touch with each other and responsive to technology. Upon entering the enclosure, the viewer enters an &#8220;infinity cube&#8221; that expands infinitely and reacts to human motion, connecting the body to technology.</p>
+                    <p>The following work connected technology to the body in a slightly more literal sense. To start their presentation, Alice Huang (MIT &#8216;15) strapped on a robotic arm, which can be controlled by one&#8217;s feet, an incredibly impressive feat for a three-week project. The other group members are Daniel Goodman (MIT &#8216;15) and Cynthia Liu (RISD &#8216;15) and together they are working on a new version of the housing of the arm that is more united with the aesthetics of the arm itself to hone in on an artistic voice and embedded story.</p>
+                    <p>The work that Melody Cao (RISD/Brown &#8216;16) and Ben Moreno Ortiz (Brown &#8216;14) presented was quite provocative in it&#8217;s voice. The duo presented a machine, which when squeezed and blown into speaks phonemes. Although some of the critics were offput by the repurposing of a mouth puppet purchased from a flea market, others were enchanted by its personality and boldness.</p>
+                    <p>The next group showed us their work &#8220;Dream of Akinosuke&#8221;, a jewelry piece based on a Japanese fable of the same name. The group was inspired by the fable&#8217;s imaginings of how butterflies could control humans. The piece is strikingly beautiful and subtle in the way it tricks one&#8217;s eye to believe the butterflies adorning it are alive. Upon closer inspection, one realizes that the illusion is caused by masterful use of flexinol, a shape memory alloy that shortens when a current passes through it. This produces an effect that blends beauty with the elegantly grotesque.</p>
+                    <p>The last group, consisting of Josh Bohar (RISD &#8216;15), Abubakar Abid (MIT &#8216;15) and James Hobin (MIT &#8216;16) also addressed the grotesque. &#8220;I&#8217;m going to need a volunteer&#8221; Bohar said &#8220;and if the electrodes feel like they are going to heat up and burn your head, don&#8217;t worry, it&#8217;s totally normal.&#8221; Of course, Bohar was only joking and the setup was completely safe. Once the cap (pictured above) was on and functioning, Abid took out an anatomically correct silicone cast brain. A flick of a switch later and the cast brain was alive blinking LED patterns that matched the activity of whoever wore the cap. &#8220;That&#8217;s your brain&#8221; explained Abid. It was peculiar how much ownership of the remote brain the user felt upon placing on the cap. One critic noted how the brain fit perfectly in one&#8217;s hands, which made the interaction all the more intimate. &#8220;I really want to see you in a rocking chair stroking the brain during the opening&#8221; said Sophia Brueckner, one of the workshop facilitators.</p>
+                    <p>After the critique the group discussed plans for the show which will open at 7 p.m. on February 15 at Expos&eacute;, located on the second floor of 204 Westminster Street in Providence, RI. It will include music, refreshments, interactive works, and limited-edition prints for attendees. The show will remain up after the opening for at least one week.</p>
+                    <p>We hope you can join us and thanks so much for following us!</p>
+                </span>
+            </div>
+
+            <div class="chunk_a" id="resources">
+                <h2>Resources</h2>
+                <p>
+                    For some introductions to various digital manufacturing resources, <a href="http://steamstudio.us">STEAMstudio</a> is a good place to start.<br />
+                    <a href="https://docs.google.com/document/d/1MSf27gNIe4Vc2sKQwpJpL3iUvUIftgOfZl_Yd7Ix8l8/">Here</a> is a document for good part-buying resources.<br />
+
+                    Two short inspirational sci-fi reads: <a href="http://www.infinityplus.co.uk/stories/tap.htm">TAP by Greg Egan</a>, <a href="http://oglethorpe.edu/faculty/~m_rulison/Honors/SpeculativeFiction/Documents/Day%20Million%20(pohl).pdf">Day Million by Frederik Pohl</a>.<br />
+
+                    <a href="http://buildinprogress.herokuapp.com">Build in Progress</a>, the project history and organization app we recommend.<br />
+                    This is the <a href="http://buildinprogress.herokuapp.com/collections/12">Human+Computer Project Page</a>.
+
+                    For future STEAM updates, please sign up for our <a href="http://ltwp.us7.list-manage.com/subscribe?u=bfe7bb6c704871b06a26bce8d&id=dbc0f0612b">LISTSERV</a>!
+                </p>
+
+                <h2>Final Show</h2>
+                <p>
+                    A show featuring all of the work and others from the RISD, Brown, and MIT communities, will open on February 15th at Expos&eacute;, RISD&#8217;s student run gallery. Hope to see you there!
+                    <a href="http://risdexpose.com/">Expos&eacute;</a> is located at 204 Westminster in Providence, RI on the second floor.
+                </p>
+
+                <h2>Press</h2>
+                <p>
+                    <a href="http://our.risd.edu/post/75640169726/human-computer">Our RISD: Human + Computer!</a>
+                </p>
+
+            </div>
+
+            <div class="chunk_b" id="contact">
+                <h2>Contact</h2>
+
+                <div id="one">
+                    <p>Please reach out with any questions! You can contact us individually via our websites or at <a href="mailto:info@steamwith.us">info@steamwith.us</a>.</p>
+
+                </div>
+
+                <div id="two">
+                    MIT Media Lab<br /><br /><br />
+                    MIT Media Lab<br /><br /><br />
+                    MIT Media Lab<br /><br /><br />
+                    RISD STEAM<br /><br />
+                </div>
+
+                <div id="two">
+                    <a href="http://web.media.mit.edu/~mellis/">David Mellis</a><br /><br /><br />
+                    <a href="http://www.sophiabrueckner.com">Sophia Brueckner</a><br /><br /><br />
+                    <a href="http://web.mit.edu/ttseng/www/">Tiffany Tseng</a><br /><br /><br />
+                    <a href="http://www.ryanflomerfelt.com">Ryan Flomerfelt Mather</a><br /><br /><br />
+                    </div>
+
+                <p style="clear: both"><br /></p>
+
+            </div>
+            <br />
+            <div id="sponsor_box">
+                <a href="http://risd.steamwith.us"><img height="80" src="http://steamwith.us/hc/logos/1.png" /></a><a href="http://brown.steamwith.us"><img height="80" src="http://steamwith.us/hc/logos/2.png" /></a><a href="http://csi.risd.edu"><img height="80" src="http://steamwith.us/hc/logos/4.jpg" /></a><a href="http://brown.edu/arts"><img height="80" src="http://steamwith.us/hc/logos/5.png" /></a><a href="http://arts.mit.edu/about/camit/"><img height="80" src="http://steamwith.us/hc/logos/6.png" /></a><a href="http://risd.edu"><img height="80" src="http://steamwith.us/hc/logos/7.jpg" /></a><a href="http://brown.edu"><img height="80" src="http://steamwith.us/hc/logos/8.jpg" /></a><a href="http://media.mit.edu"><img height="80" src="http://steamwith.us/hc/logos/3.png" /></a>
+            </div>
+            <div id="buffer">
+                Property of STEAM. Also sponsored by RISD Architecture &amp; Design, and the Edna Lawrence Nature Lab.
+            </div>
+        </div>
+    </body>
+</html>

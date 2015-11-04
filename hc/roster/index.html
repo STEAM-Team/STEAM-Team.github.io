@@ -1,0 +1,234 @@
+<html>
+    <head>
+
+        <!--
+add sponsorship images
+-->
+
+        <title>HUMAN+COMPUTER // STEAM</title>
+        <link rel="stylesheet" href="hc.css" />
+        <link href="css/lightbox.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css' />
+
+        <link rel="shortcut icon" href="http://steamwith.us/generic_favicon.ico" type="image/x-icon" />
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-46633079-1', 'steamwith.us');
+            ga('send', 'pageview');
+
+        </script>
+
+        <script type="text/javascript">
+
+            //(function(){var b,d,c;b=jQuery;c=(function(){function b(){this.fadeDuration=500;this.fitImagesInViewport=true;this.resizeDuration=700;this.showImageNumberLabel=true;this.wrapAround=false}b.prototype.albumLabel=function(b,c){return"Image "+b+" of "+c};return b})();d=(function(){function c(b){this.options=b;this.album=[];this.currentImageIndex=void 0;this.init()}c.prototype.init=function(){this.enable();return this.build()};c.prototype.enable=function(){var c=this;return b('body').on('click','a[rel^=lightbox], area[rel^=lightbox], a[data-lightbox], area[data-lightbox]',function(d){c.start(b(d.currentTarget));return false})};c.prototype.build=function(){var c=this;b("<div id='lightboxOverlay' class='lightboxOverlay'></div><div id='lightbox' class='lightbox'><div class='lb-outerContainer'><div class='lb-container'><img class='lb-image' src='' /><div class='lb-nav'><a class='lb-prev' href='' ></a><a class='lb-next' href='' ></a></div><div class='lb-loader'><a class='lb-cancel'></a></div></div></div><div class='lb-dataContainer'><div class='lb-data'><div class='lb-details'><span class='lb-caption'></span><span class='lb-number'></span></div><div class='lb-closeContainer'><a class='lb-close'></a></div></div></div></div>").appendTo(b('body'));this.$lightbox=b('#lightbox');this.$overlay=b('#lightboxOverlay');this.$outerContainer=this.$lightbox.find('.lb-outerContainer');this.$container=this.$lightbox.find('.lb-container');this.containerTopPadding=parseInt(this.$container.css('padding-top'),10);this.containerRightPadding=parseInt(this.$container.css('padding-right'),10);this.containerBottomPadding=parseInt(this.$container.css('padding-bottom'),10);this.containerLeftPadding=parseInt(this.$container.css('padding-left'),10);this.$overlay.hide().on('click',function(){c.end();return false});this.$lightbox.hide().on('click',function(d){if(b(d.target).attr('id')==='lightbox'){c.end()}return false});this.$outerContainer.on('click',function(d){if(b(d.target).attr('id')==='lightbox'){c.end()}return false});this.$lightbox.find('.lb-prev').on('click',function(){if(c.currentImageIndex===0){c.changeImage(c.album.length-1)}else{c.changeImage(c.currentImageIndex-1)}return false});this.$lightbox.find('.lb-next').on('click',function(){if(c.currentImageIndex===c.album.length-1){c.changeImage(0)}else{c.changeImage(c.currentImageIndex+1)}return false});return this.$lightbox.find('.lb-loader, .lb-close').on('click',function(){c.end();return false})};c.prototype.start=function(c){var f,e,j,d,g,n,o,k,l,m,p,h,i;b(window).on("resize",this.sizeOverlay);b('select, object, embed').css({visibility:"hidden"});this.$overlay.width(b(document).width()).height(b(document).height()).fadeIn(this.options.fadeDuration);this.album=[];g=0;j=c.attr('data-lightbox');if(j){h=b(c.prop("tagName")+'[data-lightbox="'+j+'"]');for(d=k=0,m=h.length;k<m;d=++k){e=h[d];this.album.push({link:b(e).attr('href'),title:b(e).attr('title')});if(b(e).attr('href')===c.attr('href')){g=d}}}else{if(c.attr('rel')==='lightbox'){this.album.push({link:c.attr('href'),title:c.attr('title')})}else{i=b(c.prop("tagName")+'[rel="'+c.attr('rel')+'"]');for(d=l=0,p=i.length;l<p;d=++l){e=i[d];this.album.push({link:b(e).attr('href'),title:b(e).attr('title')});if(b(e).attr('href')===c.attr('href')){g=d}}}}f=b(window);o=f.scrollTop()+f.height()/10;n=f.scrollLeft();this.$lightbox.css({top:o+'px',left:n+'px'}).fadeIn(this.options.fadeDuration);this.changeImage(g)};c.prototype.changeImage=function(f){var d,c,e=this;this.disableKeyboardNav();d=this.$lightbox.find('.lb-image');this.sizeOverlay();this.$overlay.fadeIn(this.options.fadeDuration);b('.lb-loader').fadeIn('slow');this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();this.$outerContainer.addClass('animating');c=new Image();c.onload=function(){var m,g,h,i,j,k,l;d.attr('src',e.album[f].link);m=b(c);d.width(c.width);d.height(c.height);if(e.options.fitImagesInViewport){l=b(window).width();k=b(window).height();j=l-e.containerLeftPadding-e.containerRightPadding-20;i=k-e.containerTopPadding-e.containerBottomPadding-110;if((c.width>j)||(c.height>i)){if((c.width/j)>(c.height/i)){h=j;g=parseInt(c.height/(c.width/h),10);d.width(h);d.height(g)}else{g=i;h=parseInt(c.width/(c.height/g),10);d.width(h);d.height(g)}}}return e.sizeContainer(d.width(),d.height())};c.src=this.album[f].link;this.currentImageIndex=f};c.prototype.sizeOverlay=function(){return b('#lightboxOverlay').width(b(document).width()).height(b(document).height())};c.prototype.sizeContainer=function(f,g){var b,d,e,h,c=this;h=this.$outerContainer.outerWidth();e=this.$outerContainer.outerHeight();d=f+this.containerLeftPadding+this.containerRightPadding;b=g+this.containerTopPadding+this.containerBottomPadding;this.$outerContainer.animate({width:d,height:b},this.options.resizeDuration,'swing');setTimeout(function(){c.$lightbox.find('.lb-dataContainer').width(d);c.$lightbox.find('.lb-prevLink').height(b);c.$lightbox.find('.lb-nextLink').height(b);c.showImage()},this.options.resizeDuration)};c.prototype.showImage=function(){this.$lightbox.find('.lb-loader').hide();this.$lightbox.find('.lb-image').fadeIn('slow');this.updateNav();this.updateDetails();this.preloadNeighboringImages();this.enableKeyboardNav()};c.prototype.updateNav=function(){this.$lightbox.find('.lb-nav').show();if(this.album.length>1){if(this.options.wrapAround){this.$lightbox.find('.lb-prev, .lb-next').show()}else{if(this.currentImageIndex>0){this.$lightbox.find('.lb-prev').show()}if(this.currentImageIndex<this.album.length-1){this.$lightbox.find('.lb-next').show()}}}};c.prototype.updateDetails=function(){var b=this;if(typeof this.album[this.currentImageIndex].title!=='undefined'&&this.album[this.currentImageIndex].title!==""){this.$lightbox.find('.lb-caption').html(this.album[this.currentImageIndex].title).fadeIn('fast')}if(this.album.length>1&&this.options.showImageNumberLabel){this.$lightbox.find('.lb-number').text(this.options.albumLabel(this.currentImageIndex+1,this.album.length)).fadeIn('fast')}else{this.$lightbox.find('.lb-number').hide()}this.$outerContainer.removeClass('animating');this.$lightbox.find('.lb-dataContainer').fadeIn(this.resizeDuration,function(){return b.sizeOverlay()})};c.prototype.preloadNeighboringImages=function(){var c,b;if(this.album.length>this.currentImageIndex+1){c=new Image();c.src=this.album[this.currentImageIndex+1].link}if(this.currentImageIndex>0){b=new Image();b.src=this.album[this.currentImageIndex-1].link}};c.prototype.enableKeyboardNav=function(){b(document).on('keyup.keyboard',b.proxy(this.keyboardAction,this))};c.prototype.disableKeyboardNav=function(){b(document).off('.keyboard')};c.prototype.keyboardAction=function(g){var d,e,f,c,b;d=27;e=37;f=39;b=g.keyCode;c=String.fromCharCode(b).toLowerCase();if(b===d||c.match(/x|o|c/)){this.end()}else if(c==='p'||b===e){if(this.currentImageIndex!==0){this.changeImage(this.currentImageIndex-1)}}else if(c==='n'||b===f){if(this.currentImageIndex!==this.album.length-1){this.changeImage(this.currentImageIndex+1)}}};c.prototype.end=function(){this.disableKeyboardNav();b(window).off("resize",this.sizeOverlay);this.$lightbox.fadeOut(this.options.fadeDuration);this.$overlay.fadeOut(this.options.fadeDuration);return b('select, object, embed').css({visibility:"visible"})};return c})();b(function(){var e,b;b=new c();return e=new d(b)})}).call(this);
+
+            $(document).ready(function(){
+
+                $("#nav2").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#roster").offset().top - 45
+                    }, 800);
+                });
+
+                //$(document).scroll(function() {
+                //    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                //    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                //    if (scrollTop > (showPoint)) { //when we reach showPoint
+                //        $("#logo_small").show("slow"); //show
+                //    } else {
+                //        $("#logo_small").hide("slow"); // else hide
+                //    }
+                //});
+
+
+                $(document).scroll(function() {
+                    var scrollTop = $(document).scrollTop(); //distance to scroll to the top of the document
+                    var showPoint = $("#content").offset().top - 69; //distance of anchor #show-anchor from the top of the document
+                    if(scrollTop > showPoint+50) {
+                        //$('#logo_small').animate({left: 20},500);
+                        $('#logo_small').fadeIn();
+                        //$('#logo_small').animate({
+                        //top: "100"
+                        //},800);
+                    } else {
+                        //$('#logo_small').animate({left: -100},500);
+                        $('#logo_small').fadeOut();
+                        //$('#logo_small').animate({
+                        //top: "-20"
+                        //},800);
+                    }
+
+                });
+
+            });
+        </script>
+        <script src="js/lightbox.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="nav">
+            <a id="nav1" href="http://steamwith.us">steam</a> <h6>/</h6> <a id="nav2" href="#">roster</a>
+        </div>
+
+        <div id="intro">
+            <h1><p style="background: rgba(0,0,0,0);"><span style="color: white; background: black; padding: 4px; line-height: 55px;">H+C Class Roster</span></p></h1>
+        </div>
+
+
+        <div class="content">
+
+            <div class="chunk_a" id="roster">
+                <br />
+
+                <div class="person">
+                    <img src="headshots/Abubakar_Abid.jpg" />
+                    <p>
+                        ABUBAKAR ABID<br />
+                        Junior Undergrad, MIT, Electrical Engineering & Computer Science<br />
+                        "I've always considered in strange that electronics and hardware have not yet become part of our body the way they've become part of the rest of our world."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Alexander_Czulak.jpg" />
+                    <p>
+                        ALEX CZULAK<br />
+                        Graduate Student, Brown, Fluid Mechanics<br />
+                        "The internet of things is giving rise to a multitude of new connected devices and sensors that give new potential for collecting information about our world in real time that has not existed in the past."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Alexandra_Ju.jpg" />
+                    <p>
+                        ALEXANDRA JU<br />
+                        Sophomore Undergrad, RISD, Jewelry & Metalsmithing<br />
+                        "As a Jewelry and Metalsmithing student, hailing from a Silicon Valley family full of engineers, the idea of reconciling my past and present has greatly influenced the approach I take to my work and my plans for my future."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Alice_Huang.jpg" />
+                    <p>
+                        ALICE HUANG<br />
+                        Junior Undergrad, MIT, Mechanical Engineering<br />
+                        "The intersection of art and engineering in product design is where I would like to develop my skills and pursue a career in."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Benjamin_Moreno_Ortiz.jpg" />
+                    <p>
+                        BEN MORENO ORTIZ<br />
+                        Graduate Student, Brown, Literary Arts (Digital Language Arts)<br />
+                        "Sound just like my cup of tea."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Bevin_Kelley.jpg" />
+                    <p>
+                        BEVIN KELLEY<br />
+                        Graduate Student, Brown, Computer Music & Multimedia Composition<br />
+                        "I am a computer music sound designer video maker who often adapts works of science fiction to multimedia performance."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Celine_Chappert.png" />
+                    <p>
+                        CELINE CHAPPERT<br />
+                        Senior Undergrad, RISD, Film/Animation/Video<br />
+                        "I often find myself meditating on the tension between programmed simulation and what it means to be human."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Cynthia_Liu.png" />
+                    <p>
+                        CYNTHIA LIU<br />
+                        Graduate Student, RISD, Digital + Media<br />
+                        "It is challenging and exciting to work projects with different people from quickly prototyping and experimenting many ideas."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Daniel_Goodman.png" />
+                    <p>
+                        DANIEL GOODMAN<br />
+                        Graduate Student, MIT, Media Arts & Sciences<br />
+                        "I want to be able to collect active and passive data from a person and use it to augment, enhance, and optimize the environment in which the person lives.  Devices and methods that are attractive, effective, and non-intrusive are key."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Evan_Brooks.jpg" />
+                    <p>
+                        EVAN BROOKS<br />
+                        Senior Undergrad, RISD, Graphic Design<br />
+                        "I'm especially interested in the tools we use to design for new media, and for the body, in addition to the tools we could potentially create."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/James_Hobin.jpg" />
+                    <p>
+                        JAMES HOBIN<br />
+                        Sophomore Undergrad, MIT, Computer Science<br />
+                        "I'm currently interested in lowering the effort required for creating meaningful uses of technology, because in this silicon age computation should be the air we breathe."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Joshua_Bohar.jpg" />
+                    <p>
+                        JOSHUA BOHAR<br />
+                        Graduate student, RISD, Architecture<br />
+                        "First and foremost I'm interest in continuing to research the idea of neuro and cognitive ergonomics."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Kate_OConnor.jpg" />
+                    <p>
+                        KATE O'CONNOR<br />
+                        Senior Undergrad, MIT, Robotics<br />
+                        "I'm excited about the field of assistive robotics.  There have been a lot of amazing developments in that field recently and I believe that it has the potential to reshape the future.  This is what I want to do with my life."
+                    </p>
+                </div>
+
+                <div class="person">
+                    <img src="headshots/Melody_Cao.jpg" />
+                    <p>
+                        MELODY CAO<br />
+                        Junior Undergrad, Brown &amp; RISD, Computer Science and Industrial Design<br />
+                        "As technological devices begin hitting closer to home and inch ever nearer to our bodies, it would be fun to see how far we can go with responsive wearables"
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <br />
+    <div id="sponsor_box">
+        <a href="http://risd.steamwith.us"><img height="80" src="http://steamwith.us/hc/logos/1.png" /></a><a href="http://brown.steamwith.us"><img height="80" src="http://steamwith.us/hc/logos/2.png" /></a><a href="http://csi.risd.edu"><img height="80" src="http://steamwith.us/hc/logos/4.jpg" /></a><a href="http://brown.edu/arts"><img height="80" src="http://steamwith.us/hc/logos/5.png" /></a><a href="http://arts.mit.edu/about/camit/"><img height="80" src="http://steamwith.us/hc/logos/6.png" /></a><a href="http://risd.edu"><img height="80" src="http://steamwith.us/hc/logos/7.jpg" /></a><a href="http://brown.edu"><img height="80" src="http://steamwith.us/hc/logos/8.jpg" /></a><a href="http://media.mit.edu"><img height="80" src="http://steamwith.us/hc/logos/3.png" /></a>
+    </div>
+    <div id="buffer">
+        Property of STEAM. Also sponsored by RISD Architecture &amp; Design, and the Edna Lawrence Nature Lab.
+    </div>
+</div>
+</body>
+</html>
