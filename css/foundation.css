@@ -139,6 +139,10 @@
   background-image: url("../img/Yale_Vertical.png");
   background-position: 75px 0;
 }
+#ParsonsSTEAM div{
+  background-image: url("../img/Parsons_Vertical.png");
+  background-position: 75px 0;
+}
 #BrownSTEAM:hover td div{
   /*background-position: 0 25px;*/
   background-position: 0 0;
@@ -150,6 +154,9 @@
   background-position: 0 0;
 }
 #YaleSTEAM:hover div{
+  background-position: 0 0;
+}
+#ParsonsSTEAM:hover div{
   background-position: 0 0;
 }
 
@@ -213,6 +220,17 @@
   color: #000000;
 }
 
+.Parsons {
+	color: #f77116;
+}
+
+.Parsons a {
+	color: #f77116;
+}
+
+.Parsons h1 {
+	color: #f77116;
+}
 .def{
   color: #000000;
 }
