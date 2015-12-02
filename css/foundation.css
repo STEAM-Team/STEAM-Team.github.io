@@ -147,6 +147,10 @@
   background-image: url("../img/BU_Vertical.png");
   background-position: 75px 0;
 }
+#RutgersSTEAM div{
+  background-image: url("../img/Rutgers_Vertical.png");
+  background-position: 75px 0;
+}
 #BrownSTEAM:hover td div{
   /*background-position: 0 25px;*/
   background-position: 0 0;
@@ -166,7 +170,9 @@
 #BUSTEAM:hover div{
   background-position: 0 0;
 }
-
+#RutgersSTEAM:hover div{
+  background-position: 0 0;
+}
 
 @media only screen and (min-width: 40.063em) {
 .mainSTEAM {
@@ -250,6 +256,18 @@
 
 .BU h1 {
 	color: #0ba016;
+}
+
+.Rutgers {
+	color: #6048a8;
+}
+
+.Rutgers a {
+	color: #6048a8;
+}
+
+.Rutgers h1 {
+	color: #6048a8;
 }
 
 .def{
