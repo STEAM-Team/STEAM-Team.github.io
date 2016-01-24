@@ -1,0 +1,183 @@
+/*need full div for all cover pages. Only use section to divide up into logical text parts not for*/
+
+/*override Bootstrap jumbotron for full screen landing page*/
+html, body, .fullpage {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Change to hand on hover */
+/*li { cursor: pointer; cursor: hand; }*/
+
+.static{
+	top: 0;
+	position:fixed;
+
+}
+
+/* Small devices, Medium, and Large Devices*/
+/*.fullscreen{
+	height:100%;
+	min-height:100%;
+	overflow-y: hidden;
+}*/
+
+.fullpage{
+	/*border-top-style: solid;
+	border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #F5822C;*/
+    overflow:hidden;
+    padding: 50px;
+}
+
+.extra-large-spacer{
+	margin-top:12vw;
+}
+
+.large-spacer {
+    margin-top: 8vw;
+}
+
+.medium-spacer {
+    margin-top: 4vw;
+}
+
+.small-spacer{
+	margin-top:2.8vw;
+}
+
+/*reset page font size to allow easy translation (0.8em = 8px) 62.5% */
+body {
+	/*background-size:cover;*/
+	/*background-color: #FFFFFF;*/
+	/*font-family: Orator Std;*/
+	/*font-size: 15px;*/
+}
+
+@font-face {
+  font-family: 'NHaasGrotesk';
+  src: local('☺︎'),
+         url('../fonts/NHaasGroteskDSPro-65Md.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SuperiorTitle';
+  src: local('☺︎'),
+         url('../fonts/SuperiorTitleLight.otf') format('embedded-opentype');
+}
+
+.navbar{
+	background:none;
+	border-style:none;
+	padding:0;
+}
+
+nav{
+	font-family: 'NHaasGrotesk';
+	font-size: 160%;
+	color: #000000;
+	text-align: right;
+	margin: 10px;
+}
+
+nav a{
+	margin-left: 10px;
+	margin-right:10px;
+}
+
+#mobile-nav{
+	font-size:75%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+a:hover {
+	color: #F5822C;
+}
+
+a {
+	color: #000000;
+}
+
+.container{
+	height; 100%;
+	}
+
+#full{
+	min-height:100%;
+}
+
+#desktop h1{
+	font-family: 'NHaasGrotesk';
+	font-size: 26px;
+	color: #000000;
+	text-align: right;
+	margin:7px;
+}
+
+#mobile h1{
+	font-family: 'NHaasGrotesk';
+	font-size: 16px;
+	color: #000000;
+	text-align: right;
+	margin:7px;
+}
+
+h2{
+	font-family: 'NHaasGrotesk';
+	font-size: 30px;
+	color: #000000;
+	text-align: left;
+}
+
+p{
+	font-family: 'SuperiorTitle';
+	font-size:20px;
+	color: #000000;
+	text-align: left;
+	line-height: 120%;
+	margin-bottom:25px;
+}
+
+#icon{
+	height:55px;
+	margin:5px;
+}
+
+/*display div horizontally-vertically centered to screen size */
+/*.centered{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}*/
+
+/*.abs-center {
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	width: 50%;
+	height: 50%;
+	margin-right: 32%;
+	vertical-align: middle;
+}*/
+
+/*#showLeftPush{
+	position: fixed; 
+	left:20px;
+	top:15px;
+	color:black;
+	z-index: 1010;
+}*/
+
+/*.btn:focus, .btn:active:focus, .btn.active:focus{
+    outline:0;
+    box-shadow:none;
+}
