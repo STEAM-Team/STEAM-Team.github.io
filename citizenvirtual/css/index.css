@@ -155,13 +155,13 @@ p{
 }
 
 @media (max-width: 600px) {
-html, body, .fullpage {
+	html, body, .fullpage {
     margin: 0;
     padding: 20px;
     width: 100%;
 	position:relative;
-	margin-bottom: 1000px;
-}	
+	height:inherit;
+	}
 .navbar{
 	background:none;
 	border-style:none;
@@ -179,6 +179,22 @@ html, body, .fullpage {
 }
 
 
+	}
+	
+	@media (max-width:400px){
+		html, body, .fullpage {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+	position:relative;
+}
+	.about {
+		margin-bottom: 750px;
+	}
+	
+	.events {
+		margin-bottom: 750px;
+	}
 	}
 
 /*display div horizontally-vertically centered to screen size */
