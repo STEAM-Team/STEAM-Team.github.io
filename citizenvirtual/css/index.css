@@ -160,7 +160,7 @@ html, body, .fullpage {
     padding: 20px;
     width: 100%;
 	position:relative;
-	margin-bottom: 100px;
+	margin-bottom: 1000px;
 }	
 .navbar{
 	background:none;
@@ -176,8 +176,6 @@ html, body, .fullpage {
 
 .col-xs-12 {
 	margin-top: 40%;
-	position:relative;
-	
 }
 
 
