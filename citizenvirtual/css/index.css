@@ -159,7 +159,8 @@ html, body, .fullpage {
     margin: 0;
     padding: 20px;
     width: 100%;
-/*     height: inherit; */
+	position:relative;
+	margin-bottom: 100px;
 }	
 .navbar{
 	background:none;
