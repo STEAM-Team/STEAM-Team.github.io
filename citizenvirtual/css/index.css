@@ -6,7 +6,6 @@ html, body, .fullpage {
     padding: 0;
     width: 100%;
     height: 100%;
-    position: relative;
 }
 
 /*Change to hand on hover */
@@ -32,6 +31,7 @@ html, body, .fullpage {
     border-color: #F5822C;*/
     /*overflow:hidden;*/
     padding: 50px;
+    position: relative;
 }
 
 .extra-large-spacer{
