@@ -176,6 +176,8 @@ html, body, .fullpage {
 
 .col-xs-12 {
 	margin-top: 40%;
+	position:relative;
+	
 }
 
 
