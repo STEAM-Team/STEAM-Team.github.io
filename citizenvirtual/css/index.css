@@ -6,6 +6,7 @@ html, body, .fullpage {
     padding: 0;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 /*Change to hand on hover */
@@ -81,6 +82,7 @@ nav{
 	color: #000000;
 	text-align: right;
 	margin: 10px;
+	
 }
 
 nav a{
@@ -97,15 +99,18 @@ nav a{
 
 
 a:hover {
-	color: #F5822C;
+	color: #6452a2;
+	text-decoration: none;
 }
 
 a {
-	color: #000000;
+	color: #e28d28;
+		font-family: 'NHaasGrotesk';
 }
 
 .container{
 	height; 100%;
+	position:relative;
 	}
 
 #full{
@@ -148,6 +153,25 @@ p{
 	height:55px;
 	margin:5px;
 }
+
+@media (max-width: 600px) {
+	
+.navbar{
+	background:none;
+	border-style:none;
+	padding:0;
+	background-color: white;
+	margin-top: 0px;
+	padding-top: 10px;
+	border-bottom: 1px solid #000000;
+	width:100%;
+	margin-left: 0px;
+}
+
+.col-xs-12 {
+	margin-top: 40%;
+}
+	}
 
 /*display div horizontally-vertically centered to screen size */
 /*.centered{
