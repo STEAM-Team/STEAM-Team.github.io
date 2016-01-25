@@ -155,7 +155,12 @@ p{
 }
 
 @media (max-width: 600px) {
-	
+html, body, .fullpage {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+/*     height: inherit; */
+}	
 .navbar{
 	background:none;
 	border-style:none;
@@ -171,6 +176,8 @@ p{
 .col-xs-12 {
 	margin-top: 40%;
 }
+
+
 	}
 
 /*display div horizontally-vertically centered to screen size */
