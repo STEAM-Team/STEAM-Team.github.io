@@ -151,6 +151,10 @@
   background-image: url("../img/Rutgers_Vertical.png");
   background-position: 75px 0;
 }
+#HarvardSTEAM div{
+  background-image: url("../img/Harvard_Vertical.png");
+  background-position: 75px 0;
+}
 #BrownSTEAM:hover td div{
   /*background-position: 0 25px;*/
   background-position: 0 0;
@@ -171,6 +175,9 @@
   background-position: 0 0;
 }
 #RutgersSTEAM:hover div{
+  background-position: 0 0;
+}
+#HarvardSTEAM:hover div{
   background-position: 0 0;
 }
 
@@ -268,6 +275,18 @@
 
 .Rutgers h1 {
 	color: #6048a8;
+}
+
+.Harvard {
+	color: #fcc342;
+}
+
+.Harvard a {
+	color: #fcc342;
+}
+
+.Harvard h1 {
+	color: #fcc342;
 }
 
 .def{
