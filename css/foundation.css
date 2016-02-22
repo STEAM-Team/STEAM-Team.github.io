@@ -139,7 +139,7 @@
   background-image: url("../img/Yale_Vertical.png");
   background-position: 75px 0;
 }
-#ParsonsSTEAM div{
+#NewSchoolSTEAM div{
   background-image: url("../img/Parsons_Vertical.png");
   background-position: 75px 0;
 }
@@ -168,7 +168,7 @@
 #YaleSTEAM:hover div{
   background-position: 0 0;
 }
-#ParsonsSTEAM:hover div{
+#NewSchoolSTEAM:hover div{
   background-position: 0 0;
 }
 #BUSTEAM:hover div{
