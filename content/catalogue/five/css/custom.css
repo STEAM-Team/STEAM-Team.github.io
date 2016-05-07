@@ -1,0 +1,26 @@
+#description {
+	padding:50px;
+}
+
+#articleContainer{
+	border: 100px;
+	margin-left:4em;
+	margin-right:2em;
+	margin-bottom:150px;
+	max-width:700px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	border: 0px;
+	    border-radius: 4px 4px 0 0
+}
+
+
+.image {
+	width:400px;
+	height:400px;
+}
