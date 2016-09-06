@@ -439,7 +439,7 @@
 					<img src="img/minsoo.jpg"/>
 				</div>
 				<p>Let’s start with the shape of the pentagon.</p>
-				<p>The five vertices of the pentagon stands for the five points of the STEAM: Science, Technology, Engineering, Art, and Mathematics. Going further, now that STEAM as a student-led grassroots movement is expanding nationwide, the shape of the pentagon is different for each school. Each school has different needs and resources with which each specific chapter was founded on. The pentagon symbolically represents the pulling and reshaping of how the five disciplines of STEAM interact with each other at each school.</p>
+				<p>The five vertices of the pentagon stands for the five points of the STEAM: Science, Technology, Engineering, Art, and Mathematics, a symbol for STEAM designed by <a href="http://cath.land/" target="_blank" rel="noopener noreferrer">Catherine Schmidt</a> (RISD GD '14). Going further, now that STEAM as a student-led grassroots movement is expanding nationwide, the shape of the pentagon is different for each school. Each school has different needs and resources with which each specific chapter was founded on. The pentagon symbolically represents the pulling and reshaping of how the five disciplines of STEAM interact with each other at each school.</p>
 				<div id="foreword-collapse" class="collapse">
 					<p>Each catalogue is the center point of the STEAM network, as the culmination of the students’ manifestation of the idea of STEAM, brought together in one place to be disseminated to educators, students, policy makers, and industry leaders. This is our story and the work we have done, are doing, and will continue to do as we diversify and expand. Each school will have its own story, its own way of working together to unite seemingly disparate fields of study or groups of people together, to forge new ways of learning, of growing, and of experiencing the world. Whether it is through meeting different people or creating work collaboratively with someone who sees the problem in a completely different light, there has always been a place for the sciences to co-exist and flourish alongside the arts. Our world is no longer about purism, but rather, inter-connectedness. We are the nodes bouncing around wildly, making connections with the communities around us, the resources available to us, and to other nodes that we collide with.</p>
 					<p>The pentagon assembles the different disciplines, joined together in a charged pursuit for knowledge, innovation, and new ways of seeing our world so that we may help each other get outside of our single point (of view) and together, form new areas for exploration and expansion.</p>
@@ -2097,7 +2097,7 @@
 					<p>A famous institutional example of a “Mode 2” working style is the MIT Media Lab, broken down into working groups that are project-based rather than rooted in any disciplinary tradition. They are smaller in size than typical academic departments and are unafraid to borrow information and processes from wherever they find necessary in the intellectual landscape. The media lab calls itself a more nebulous term, <a href="http://joi.ito.com/weblog/2014/10/02/antidisciplinar.html" target="_blank" rel="noopener noreferrer">“antidisciplinary”</a>. Perhaps too we can appropriate thinking from David Batchelor’s 2000 Chromophobia, that “The interdisciplinary is often the antidisciplinary made safe.” Antidisciplinaryism has native to it a pushing-against, a reaction to the limitations of disciplinary boundary and mindsets. The Media Lab was founded in the 1980s and Antidiscplinaryism’s punk outlook reflects that.</p>
 					<p>Antidisciplinarity starts from the posit that disciplinaryism can be escaped at all. I am interested instead in something I believe STEAM has been indicative of—a criticality of disciplines, but recognizing the benefits they carry, too: shared language/logic, cohesive knowledge base, and community. Acknowledging that the categorization of knowledge is difficult to escape, near-impossible in academic settings. That the context of history, place, and peoples within disciplines cannot be ignored. Something that makes use of increasingly networked modes of knowledge sharing and knowledge sharing. Antidiscplinaryism in the age of Historicism.</p>
 					<p>In a conversation with my friend, category and cultural theorist <a href="http://fds.duke.edu/db/aas/math/grad/dv" target="_blank" rel="noopener noreferrer">Dmitry Vagner</a>, we recognized that simplistic metaphors of disciplinary boundaries are not high-dimensional enough to effectively explain the topology of the new knowledge landscape. Not only do we have idea-spaces, but we have, in and around a discipline, layers of evolution, colonialism, false starts, and blurred edges. Disciplines are no longer regions to be drawn in the 2D plane: they are fully-dimensioned objects. Our next steps in breaking them down come through meaningful interweaving. In the tradition of Intersectionality with regards to intermeshed systems of identity and oppression, we seek a term that acknowledges that new knowledge can no longer internally justify itself and its separation from other modes of thought.</p>
-					<p>In this vein, I seek to propose the use of the term hyphdisciplinary. (Alternatives include “disciplinary queer” and “disciplinary-fluid”.) “Hyph-,“ a prefix meaning “web,” makes literal the metaphor of a multi-dimensional inescapability of intertwined systems of knowledge.</p>
+					<p>In this vein, I seek to propose use of the term hyphdisciplinary. (Alternatives include “disciplinary queer” and “disciplinary-fluid”.) “Hyph-,“ a prefix meaning “web,” makes literal the metaphor of a multi-dimensional inescapability of intertwined systems of knowledge.</p>
 					<p>Slow-moving as they may be, our universities are increasingly cognizant of the Historicism-minded fields. It is time the language we use to explain the topology of disciplinaryism catches up. With further inclusion of modes of thought from the Humanities, Cultural Studies, and Media Theory, STEAM will continue to charge towards our hyphdisciplinary future.</p>
 					<p class="italic">By Lukas WinklerPrins, April 2016. Ongoing <a href="https://www.are.na/lukas-wp/disciplinaryism" target="_blank" rel="noopener noreferrer">research collected here</a>.</p>
 					<br>
@@ -3120,16 +3120,31 @@
 			// 	return false; 
 			// })
 	</script>
+<!-- 	$(document).ready(function () {
+		$('a[href^="#"]').on('click', function (e) {
+			console.log('trying to smooth scroll')
+			e.preventDefault();
+
+			var target = this.hash,
+			 $target = $(target);
+
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top
+			}, 900, 'swing', function () {
+				window.location.hash = target;
+			});
+		});
+	}); -->
 	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 	<script>
-	// Initialize Firebase
-	var config = {
-		apiKey: "AIzaSyDRiENYZ60rNnra2vyGL5M6XNA3dYNS6rU",
-		authDomain: "catalogue-5.firebaseapp.com",
-		databaseURL: "https://catalogue-5.firebaseio.com",
-		storageBucket: "",
-	};
-	firebase.initializeApp(config);
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyDRiENYZ60rNnra2vyGL5M6XNA3dYNS6rU",
+			authDomain: "catalogue-5.firebaseapp.com",
+			databaseURL: "https://catalogue-5.firebaseio.com",
+			storageBucket: "",
+		};
+		firebase.initializeApp(config);
 	</script>
 </body>
 </html>
