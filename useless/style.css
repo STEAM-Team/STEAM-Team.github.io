@@ -1,0 +1,94 @@
+body{
+	background-image: url("star.jpg");
+    background-repeat: repeat;
+}
+
+.header{
+	background-color: green;
+	width: 80%;
+	margin: auto;
+	border: 5px solid green;
+	text-align: center;
+	height: 350px;
+	width: 700px;
+	background-image:url("banner.png");
+    background-size: 700px 200px;
+    background-repeat: no-repeat;
+/*	background-repeat: repeat-x;
+	background-position: top left;*/
+}
+
+#rainbow {
+    background: red; /* not working, let's see some red */
+    background: -moz-linear-gradient( top ,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 255, 0, 1) 15%,
+        rgba(0, 255, 0, 1) 30%,
+        rgba(0, 255, 255, 1) 50%,
+        rgba(0, 0, 255, 1) 65%,
+        rgba(255, 0, 255, 1) 80%,
+        rgba(255, 0, 0, 1) 100%);
+    background: -webkit-gradient(linear,  left top,  left bottom, 
+        color-stop(0%, rgba(255, 0, 0, 1)), 
+        color-stop(15%, rgba(255, 255, 0, 1)),
+        color-stop(30%, rgba(0, 255, 0, 1)),
+        color-stop(50%, rgba(0, 255, 255, 1)),
+        color-stop(65%, rgba(0, 0, 255, 1)),
+        color-stop(80%, rgba(255, 0, 255, 1)),
+        color-stop(100%, rgba(255, 0, 0, 1)));
+}
+
+.header h1{
+	width: 50%;
+	margin: 210px auto 20px auto;
+	border: 3px solid black;
+	color: red;
+	text-align: center;
+}
+.header h1 em{
+	color: blue;
+}
+.header h2{
+	color: red;
+	border: 3px solid yellow;
+	width: 50%;
+	margin: 20px auto 20px auto;
+	text-align: center;
+}
+#about{
+	margin: 50px auto 50px auto;
+	background-color: blue;
+	width: 70%;
+	border: 3px solid black;
+}
+#about .coollinks{
+	background-color: yellow;
+	width: 80%;
+}
+#about em{
+	color: green;
+}
+#projects{
+	margin: 50px auto 50px auto;
+	width: 80%;
+	border: 3px solid green;
+	background-image: url("gradient.jpg");
+	background-repeat: repeat-y;
+	background-color: red;
+	text-align: center;
+}
+#projects p{
+	background-color: orange;
+	color: blue;
+	width: 50%;
+	border: 3px solid orange;
+}
+#projects h3{
+	text-align: center;
+	color: blue;
+}
+#projects img{
+	width: 50%;
+	float: right;
+	padding: 10px;
+}
