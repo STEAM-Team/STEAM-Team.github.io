@@ -98,12 +98,23 @@ table, th, td {
 	width: 100%;
 	border: 3px solid orange;
 }
-#projects h3{
+#projects h2{
 	text-align: center;
-	color: blue;
+	color: yellow;
 }
 #projects img{
 	width: 400px;
 	/*float: right;*/
 	padding: 10px;
+}
+
+#projects h3{
+	text-align: center;
+	color: blue;
+	margin: 0;
+}
+#projects h4{
+	text-align: center;
+	color: blue;
+	margin: 0;
 }
