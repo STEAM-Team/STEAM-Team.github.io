@@ -1,5 +1,5 @@
 body{
-	background-image: url("star.jpg");
+	background-image: url("img/star.jpg");
     background-repeat: repeat;
 }
 
@@ -86,7 +86,7 @@ body{
 	margin: 50px auto 50px auto;
 	width: 80%;
 	border: 3px solid green;
-	background-image: url("gradient.jpg");
+	background-image: url("img/gradient.jpg");
 	background-repeat: repeat-y;
 	background-color: red;
 	padding: 20px;
