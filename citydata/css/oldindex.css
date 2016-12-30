@@ -1,0 +1,110 @@
+/*need full div for all cover pages. Only use section to divide up into logical text parts not for*/
+
+html, body, .splash{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/*background:url("/img/BackgroundImagePNG.png");*/
+	background-size:cover;
+	/*background-color: #336699;*/
+	background-color: #FFFFFF;
+	font-family: Orator Std;
+	color: white;
+}
+
+@font-face{
+	font-family: Orator Std;
+	src: url(/fonts/OratorStd.otf);
+	font-family: Draftsman;
+	src: url(/fonts/Draftsman.ttf);
+	font-family: 'Reenie Beanie', cursive;
+}
+
+h1{
+	font-size: 12vw;
+}
+
+h2{
+	font-family: Reenie Beanie;
+	font-size: 4vw;
+}
+
+h3{
+	font-size: 2vw;
+}
+
+/*section{*/
+	/*background-color: #336699;*/
+	/*min-height: 720px;
+	width 100%;
+	margin: 0;
+	padding: 0;
+}*/
+
+/*override Bootstrap */
+/*.container-fluid{
+	padding-right:0px;
+	padding-left:0px;
+}*/
+
+article{
+	height: 100%;
+	width: 100%;
+}
+
+.splash{
+	/*background: url("Whirligig2.JPG") no-repeat center center; */
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-color:#336699;
+  	/*margin: 1%;
+  	border: 3px solid white;*/
+}
+
+.splash h1{
+	margin:0vw;
+}
+
+.splash h3{
+	font-size: 3vw;
+	margin: 0vw;
+	margin-left: 1vw;
+}
+
+/* absolute position, pushed 50 percent from top and left (by top left corner), then transformed to adjust.*/
+.centered{
+	/*position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);*/
+	position: absolute;
+	top:50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+.info{
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-color:#FFFFFF;
+}
+.about{
+	padding: 10%;
+}
+
+.about p{
+	color: black;
+}
+
+.about h2{
+	color: black;
+}
