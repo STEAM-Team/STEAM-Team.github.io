@@ -523,7 +523,31 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 10573,
+				"buffer_size": 10579,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "BrownSTEAM.html",
+			"settings":
+			{
+				"buffer_size": 11397,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "csteam.html",
+			"settings":
+			{
+				"buffer_size": 7077,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "RISDSTEAM.html",
+			"settings":
+			{
+				"buffer_size": 9854,
 				"line_ending": "Unix"
 			}
 		}
@@ -990,7 +1014,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -998,15 +1022,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 10573,
+						"buffer_size": 10579,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								8272,
+								8272
 							]
 						],
 						"settings":
@@ -1016,7 +1040,91 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1305.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "BrownSTEAM.html",
+					"settings":
+					{
+						"buffer_size": 11397,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10307,
+								10307
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3810.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "csteam.html",
+					"settings":
+					{
+						"buffer_size": 7077,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6825,
+								6825
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2322.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "RISDSTEAM.html",
+					"settings":
+					{
+						"buffer_size": 9854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7665,
+								7665
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3327.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1069,6 +1177,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"risd",
+				"RISDSTEAM.html"
+			],
+			[
+				"csteam",
+				"csteam.html"
+			],
+			[
+				"brown",
+				"BrownSTEAM.html"
+			],
 			[
 				"app.h",
 				"source/App.h"
@@ -1568,18 +1688,6 @@
 			[
 				"computer/defau",
 				"shepherd/shepherd/computer/DefaultInit.py"
-			],
-			[
-				"maya_vray",
-				"shepherd/shepherd/jobTypes/Maya_VRay.py"
-			],
-			[
-				"jobtype",
-				"shepherd/shepherd/jobTypes/Maya_VRayStandalone.py"
-			],
-			[
-				"coren_api",
-				"coren/server/routers/coren_apiRouter.js"
 			]
 		],
 		"width": 0.0
