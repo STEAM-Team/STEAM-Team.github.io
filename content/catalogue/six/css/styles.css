@@ -1,0 +1,1648 @@
+@font-face{
+	font-family: 'Open Sans', sans-serif;
+}
+
+@font-face{
+	font-family: 'Montserrat', sans-serif;
+}  
+
+/* Default Styles */ 
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Real Styles */
+
+html {
+	font-size: 62.5%;
+}
+
+body { 
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	letter-spacing: .025rem;
+	overflow-x: hidden;
+
+	font-size: 13px;
+	font-size: 1.3rem; /* =12px */
+}
+h1 { 
+	font-size: 36px;
+	font-size: 3.6rem; /* =36px */
+}
+/* Styles for xs (phone) screens. Overwritten by media queries for larger sizes*/
+h2 { 
+	font-size: 20px;
+	font-size: 2.0rem; /* =24px */
+	line-height: 28px;
+	line-height: 2.8rem;
+}
+h3 { 
+	font-size: 14px;
+	font-size: 1.4rem; /* =16px */
+	line-height: 22px;
+	line-height: 2.2rem;
+}
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+a {
+	text-decoration: underline;
+    color: black;
+    transition: color .2s;
+}
+a:visited {
+	text-decoration: underline;
+    color: black;
+}
+a:hover {
+	text-decoration: underline;
+    color: rgb(0, 0, 200);
+    transition: color .2s;
+}
+a:active {
+	text-decoration: underline;
+    color: rgb(0, 0, 200);
+}
+
+p {
+	line-height: 140%;
+	padding-bottom: 15px;
+}
+
+dt {
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+	font-weight: 700;
+}
+
+dd {
+	display: inline-block;
+	padding: 0 0 10px 10px;
+	max-width: 200px;
+}
+
+dd a, dd a:visited, dd a:active{
+	text-decoration: none !important;
+}
+
+dd a:hover{
+	color: #cccccc;
+	text-decoration: none;
+}
+
+blockquote{
+	margin-left: 30px;
+}
+
+.bold{
+	font-weight: 700;
+}
+
+.description { 
+	z-index: 40;
+	background-color: #FFF;
+	padding: 30px;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */		
+}
+
+
+.italic{
+	font-style: italic;
+}
+
+.underline{
+	text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+
+.splash{
+	min-height: 100vh;
+	min-width: 100vw;
+	margin: 0;
+	position: relative;
+}
+
+.full{
+	min-height: 595px;
+	min-height: 85vh; /* Takes into account the spacer of section above */
+	min-width: 100%;
+	min-width: 100vw;
+	margin: 0;
+	padding: 45px; /*changed from 40px*/
+	z-index: 40;
+	background-color: #FFF;
+	
+}
+
+section { 
+	z-index: 40;
+	background-color: #FFF;
+}
+
+#Welcome{
+			z-index: 40;
+		background-color: #FFF;
+}
+
+/* Applied to bootstrap rows*/
+.match-height-row{
+	overflow: hidden;
+}
+
+/* Hax for getting bootstrap columns in row to be full height */
+/* Applied to the shorter column in a row. Parent div (main) must have overflow: hidden; */
+.match-height{
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
+	background-color: red;
+}
+
+.header{
+	position: relative;
+	padding-bottom: 70px; /*px is 7*vh*/
+	padding-bottom: 10vh;
+	
+}
+
+.header-content{
+	position: absolute;
+	bottom: 0px;
+}
+
+.header h2{
+	padding-bottom: 10px;
+}
+
+.header h3{
+	padding-bottom: 15px;
+}
+
+.main{
+	position: relative;
+	padding-bottom: 100px;
+	padding-bottom: 15vh;
+	overflow: hidden;
+}
+
+.pull-down {
+	position:absolute;
+    bottom:0;
+}
+
+.flex-container{
+	display: flex;
+}
+
+/* Options for distrubting vertically*/ 
+
+/* Even distribution */
+.distribute-vertical{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column; 
+	flex-direction: column;
+	-webkit-justify-content: space-between;  
+	justify-content: space-between;
+}
+
+/* Custom distribution with spacers (in VH (1 vh is 1/100th of height))*/
+.spacer-tenth{
+	min-height: 60px;
+	min-height: 10vh;
+}
+
+.spacer-eighth{
+	min-height: 75px;
+	min-height: 12vh;
+}
+
+.spacer-sixth{
+	min-height: 100px;
+	min-height: 15vh;
+}
+
+.spacer-fifth{
+	min-height: 120px;
+	min-height: 20vh;
+	background: transparent;
+}
+
+.spacer-fourth{
+	min-height: 150px;
+	min-height: 25vh;
+}
+
+.spacer-third{
+	min-height: 200px;
+	min-height: 33.33vh;
+}
+
+.spacer-half{
+	min-height: 300px;
+	min-height: 50vh;
+}
+
+.spacer-two-thirds{
+	min-height: 410px;
+	min-height: 66.66vh;
+}
+
+.spacer-three-fourths{
+	min-height: 465px;
+	min-height: 75vh;
+}
+
+.spacer-full{
+	min-height: 600px;
+	min-height: 100vh;
+}
+
+/* Or, match height and pull-down with absolute position, bottom: 0px;*/
+/*<!--aka only match height for md and lg screens-->
+ <!-- <div class = "col-sm-4 match-height-md match-height-lg">	 -->
+<!-- <div class = "col-sm-4 distribute-vertical">			 -->*/
+
+/*.flex-start { -webkit-align-self: flex-start; align-self: flex-start; }
+.flex-end { -webkit-align-self: flex-end; align-self: flex-end; }
+.center { -webkit-align-self: center; align-self: center; }
+.baseline { -webkit-align-self: baseline; align-self: baseline; }
+.stretch { -webkit-align-self: stretch; align-self: stretch; }*/
+
+.centered{
+	text-align: center;
+}
+
+.collapsing {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	-webkit-transition-property: height, visibility;
+	-o-transition-property: height, visibility;
+	transition-property: height, visibility;
+	-webkit-transition-duration: .4s;
+	-o-transition-duration: .4s;
+	transition-duration: .4s;
+	-webkit-transition-duration: .4s;
+	-o-transition-duration: .4s;
+	transition-duration: .4s;
+	-webkit-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+.nav {
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+.nav > li {
+	position: relative;
+	display: block;
+}
+.nav > li > a {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+	text-decoration: none;
+}
+.nav > li.disabled > a {
+}
+.nav > li.disabled > a:hover,
+.nav > li.disabled > a:focus {
+	text-decoration: none;
+	background-color: transparent;
+	cursor: not-allowed;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+	background-color: none;
+}
+
+.navbar-nav{
+	margin-left: 7.5px;
+	margin-right: 0;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+	color: black;
+	background-color: transparent;
+}
+
+.navbar-toggle {
+	position: relative;
+	float: right;
+	margin-right: 15px;
+	padding: 0;
+	/*margin-top: 8px;*/
+	/*margin-bottom: 8px;*/
+	background-color: transparent;
+}
+.navbar-toggle:focus {
+	outline: 0;
+}
+.navbar-toggle .icon-bar {
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+	margin-top: 4px;
+}
+
+.navbar-header{
+	margin: 0;
+	padding: 0;
+}
+
+#fixed-nav-bar{
+	display: none;
+	position: fixed;
+	margin: 0;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-bottom-color: #cccccc;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	/* Fallback (could use .jpg/.png alternatively) */
+	/* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+	background-image:
+	-webkit-linear-gradient(left,
+	-webkit-var(--color-one) 0, -webkit-var(--color-one) 25%, var(--color-two) 25%, var(--color-two) 50%, 
+	var(--color-three) 50%, var(--color-three) 75%, var(--color-four) 75%, var(--color-four) 100%);
+	/* Firefox 3.6 - 15 */
+	background-image:
+	-moz-linear-gradient(left,
+	var(--color-one) 0, var(--color-one) 25%, var(--color-two) 25%, var(--color-two) 50%, 
+	var(--color-three) 50%, var(--color-three) 75%, var(--color-four) 75%, var(--color-four) 100%);
+	/* Opera 11.1 - 12 */
+	background-image:
+	-o-linear-gradient(left,
+	var(--color-one) 0, var(--color-one) 25%, var(--color-two) 25%, var(--color-two) 50%, 
+	var(--color-three) 50%, var(--color-three) 75%, var(--color-four) 75%, var(--color-four) 100%);
+	/* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+	background-image:
+	linear-gradient(to right, 
+	var(--color-one) 0, var(--color-one) 25%, var(--color-two) 25%, var(--color-two) 50%, 
+	var(--color-three) 50%, var(--color-three) 75%, var(--color-four) 75%, var(--color-four) 100%);
+
+	background-size: 100% 6px;
+	background-repeat: no-repeat;
+}
+
+.no-colorvars #fixed-nav-bar{
+	/* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+	background-image:
+	-webkit-linear-gradient(left,
+	#000000 0, #000000 25%, #000000 25%, #000000 50%, 
+	#000000 50%, #000000 75%, #000000 75%, #000000 100%);
+	/* Firefox 3.6 - 15 */
+	background-image:
+	-moz-linear-gradient(left,
+	#000000 0, #000000 25%, #000000 25%, #000000 50%, 
+	#000000 50%, #000000 75%, #000000 75%, #000000 100%);
+	/* Opera 11.1 - 12 */
+	background-image:
+	-o-linear-gradient(left,
+	#000000 0, #000000 25%, #000000 25%, #000000 50%, 
+	#000000 50%, #000000 75%, #000000 75%, #000000 100%);
+	/* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+	background-image:
+	linear-gradient(to right, 
+	#000000 0, #000000 25%, #000000 25%, #000000 50%, 
+	#000000 50%, #000000 75%, #000000 75%, #000000 100%);
+
+	background-size: 100% 6px;
+	background-repeat: no-repeat;
+}
+
+.no-lineargradient #fixed-nav-bar{
+	border-top-color: red;
+	border-top-style: solid;
+	border-top-width: 6px;	
+}
+
+.fixed-nav{
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #000000;
+	margin: 0;
+}
+
+.fixed-nav li {
+	/* IDK what's going on here */
+	/*padding: 8px 25px 8px 15px;*/
+	margin-left: 15px;
+	padding-left: 0px;
+	padding-right: 20px;
+}
+
+.fixed-nav li a{
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #000000;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.fixed-nav li a:hover{
+	color: #cccccc;
+}
+
+.navbar-collapse li{
+	margin-left: 0px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.icon-bar{
+	background-color: #000000;
+}
+
+#updateText{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;	
+}
+
+/* Article styles */
+.big-number {
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+	position: absolute;
+	left: -15px;
+	/*margin-right: 15px;*/
+	/*margin-left: -15px;*/
+}
+
+.big-number-double {
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+	position: absolute;
+	left: -20px;
+}
+
+.headline{
+	display: inline-block;
+}
+
+.img-right img{
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.img-right{
+	padding-left: 20px;
+	padding-right: 50px;
+	width: 100%;
+}
+
+.logo{
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.about-center{
+	/*padding-right: 50px;*/
+}
+
+.about-right{
+	padding-right: 50px;
+}
+
+
+.caption-right {
+	font-style: italic;
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-align: left;
+}
+
+.img-center{
+	padding-bottom: 15px;
+	padding-top: 15px;
+	width: 100%;
+}
+
+.img-center img{
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+/*Extra small*/
+.img-small{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.img-medium{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.caption-center {
+	font-style: italic;
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-align: left;
+}
+
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.citation{
+	font-style: italic;
+	font-size: 11px;
+	font-size: 1.1rem;
+	text-align: left;
+}
+
+.scroll-right{
+	height: 200px;
+	float: left;
+	max-width: 100%;
+	overflow-x: auto;
+    white-space: nowrap;
+	/*max-width: 100%;*/
+}
+
+.scroll-right img{
+	/*float: right;*/
+	/*display: block;*/
+	/*height: 100%;*/
+	height: 100%;
+}
+
+.read-button{
+	font-style: italic;
+}
+
+button{
+	background: none;
+	border: none;
+	padding: none;
+	margin: none;
+}
+
+.read-button button:active{
+	background: none;
+	border:none;
+}
+
+.read-button:hover{
+	color: #cccccc;
+}
+
+#we-are-list h2{
+	line-height: 32px;
+	line-height: 3.2rem;
+	/*max-width: 600px;*/
+}
+
+.RISD{
+	color: #000000;
+	text-decoration: none;
+}
+
+.RISD:visited{
+	-webkit-text-stroke: 1.5px #404040;
+}
+
+#schools h3 .RISD:hover,
+.RISD:hover{
+	color: #737373;
+	text-decoration: none;
+}
+
+
+#schools h3 .RISD-active{
+	color: #737373;
+	text-decoration: none;	
+}
+
+.Yale{
+	color: #000000;
+	text-decoration: none;
+}
+
+.Yale:visited{
+	-webkit-text-stroke: 1.5px #404040;
+}
+
+#schools h3 .Yale:hover,
+.Yale:hover {
+	color: #1A76BB;
+	text-decoration: none;
+}
+
+#schools h3 .Yale-active {
+	color: #1A76BB;
+	text-decoration: none;	
+}
+
+.MIT{
+	color: #000000;
+	text-decoration: none;
+}
+
+.MIT:visited{
+	-webkit-text-stroke: 1.5px #404040;
+}
+
+#schools h3 .MIT:hover,
+.MIT:hover {
+	color: #24A8B3;
+	text-decoration: none;
+}
+
+#schools h3 .MIT-active{
+	color: #24A8B3;
+	colro: -webkit-#24A8B3;
+	text-decoration: none;	
+}
+
+.New{
+	color: #000000;
+	text-decoration: none;
+}
+
+.New:visited{
+	-webkit-text-stroke: 1.5px #404040;
+}
+
+#schools h3 .New:hover,
+.New:hover {
+	color: #f77116;
+	text-decoration: none;
+}
+
+#schools h3 .New-active {
+	color: #f77116;
+	text-decoration: none;	
+}
+
+.Brown{
+	color: #000000;
+	text-decoration: none;
+}
+.Brown:visited{
+	-webkit-text-stroke: 1.5px #404040;
+}
+
+#schools h3 .Brown:hover,
+.Brown:hover{
+	color: #EC1C24;
+	text-decoration: none;
+}
+
+#schools h3 .Brown-active{
+	color: #EC1C24;
+	text-decoration: none;	
+}
+
+.BU{
+	color: #000000;
+	text-decoration: none;
+}
+
+.BU:visited{
+	-webkit-text-stroke: 1.5px #404040;
+}
+
+#schools h3 .BU:hover,
+.BU:hover {
+	color: #0ba016;
+	text-decoration: none;
+}
+
+#schools h3 .BU-active{
+	color: #0ba016;
+	text-decoration: none;	
+}
+
+.Rutgers{
+	color: #000000;
+	text-decoration: none;
+}
+
+.Rutgers:visited{
+	-webkit-text-stroke: 1.5px #404040;
+	text-decoration: none;
+}
+
+#schools h3 .Rutgers:hover,
+.Rutgers:link:hover,
+.Rutgers:hover {
+	color: #6048a8;
+	text-decoration: none;	
+}
+
+#schools h3 .Rutgers-active {
+	color: #6048a8;
+	text-decoration: none;
+}
+
+.Harvard{
+	color: #000000;
+	text-decoration: none;
+}
+
+.Harvard:visited{
+	-webkit-text-stroke: 1.5px #404040;
+}
+
+#schools h3 .Harvard:hover,
+.Harvard:hover {
+	color: #fcc342;
+	text-decoration: none;
+}
+
+#schools h3 .Harvard-active {
+	color: #fcc342;
+	text-decoration: none;	
+}
+
+
+.UCBerkeley{
+	color: #000000;
+	text-decoration: none;
+}
+.UCBerkeley:visited{
+	-webkit-text-stroke: 1.5px #404040;
+}
+#schools h3 .UCBerkeley:hover,
+.UCBerkeley:hover {
+	color: #CF66C1;
+	text-decoration: none;
+}
+
+#schools h3 .UCBerkeley-active {
+	color: #CF66C1;
+	text-decoration: none;	
+}
+
+
+.UMichigan{
+	color: #000000;
+	text-decoration: none;
+}
+.UMichigan:visited{
+	-webkit-text-stroke: 1.5px #404040;
+}
+#schools h3 .UMichigan:hover,
+.UMichigan:hover {
+	color: #B3C100;
+	text-decoration: none;
+}
+
+#schools h3 .UMichigan-active {
+	color: #B3C100;
+	text-decoration: none;	
+}
+
+
+.UOttawa{
+	color: #000000;
+	text-decoration: none;
+}
+.UOttawa:visited{
+	-webkit-text-stroke: 1.5px #404040;
+}
+#schools h3 .UOttawa:hover,
+.UOttawa:hover {
+	color: #C60967;
+	text-decoration: none;
+}
+#schools h3 .UOttawa-active {
+	color: #C60967;
+	text-decoration: none;	
+}
+
+
+
+.hide{
+	display:none;
+}
+
+.caption {
+	font-style: italic;
+	font-size: 13px;
+	max-width: 450px;
+	margin-top: -15px;
+}
+/*
+#sketch{
+	position:absolute;
+	z-index: 10;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+*/
+#cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	/*padding-bottom: 0px;*/
+}
+#cover h1, #cover h2, #cover h3, #cover a{
+	color: white;
+}
+
+
+#STEAM{
+	margin-left: 40px;
+	margin-left: 3vw;
+	z-index: 40;
+	position: absolute;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* This will be default xs size, so tiny, overwritten for sm, md, lg*/
+#STEAM h1 a:visited,
+#STEAM h1 a,
+#STEAM h1{
+	padding-top: 120px;
+	font-weight: 300;
+	font-size: 12.5rem;
+	font-size: 12vw;
+	letter-spacing: 2.3rem;
+	-webkit-text-stroke: 2px #404040;
+	opacity: 0.8;
+	text-decoration: none;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */	
+  	text-shadow:
+	-1px -1px 0 #404040,  
+	1px -1px 0 #404040,
+	-1px 1px 0 #404040,
+	1px 1px 0 #404040;	
+}
+#STEAM h3{
+	font-weight: 440;
+	font-size: 4rem;
+	font-size: 4vw;
+	letter-spacing: 1.5rem;
+	-webkit-text-stroke: 2px #404040;
+	opacity: 0.8;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */	
+    text-shadow:
+	-1px -1px 0 #404040,  
+	1px -1px 0 #404040,
+	-1px 1px 0 #404040,
+	1px 1px 0 #404040;	
+}
+
+
+.no-textstroke h1{
+	text-shadow:
+	-1px -1px 0 #404040,  
+	1px -1px 0 #404040,
+	-1px 1px 0 #404040,
+	1px 1px 0 #404040;	
+}
+
+#schools{
+	position: absolute;
+	right: 40px;
+	/*right: 4vw;*/
+	right: 5vh;
+	bottom: 40px;
+	bottom: 5vh;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 40px;
+	z-index: 40;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  	text-shadow:
+	-1px -1px 0 #404040,  
+	1px -1px 0 #404040,
+	-1px 1px 0 #404040,
+	1px 1px 0 #404040;	  
+}
+
+#schools h3{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 3.2rem;	
+	text-align: right;
+	line-height: inherit;
+	-webkit-text-stroke: 1.5px #404040;
+}
+.no-textstroke #schools h3{
+	/* Fallback for Firefox/Opera*/
+	text-shadow:
+	-1px -1px 0 #404040,  
+	1px -1px 0 #404040,
+	-1px 1px 0 #404040,
+	1px 1px 0 #404040;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	/* Hax for getting bootstrap columns in row to be full height */
+	/* Applied to the shorter column in a row. Parent div (main) must have overflow: hidden; */
+	.match-height-sm{
+		margin-bottom: -99999px !important;
+		padding-bottom: 99999px !important;
+		background-color: red !important;
+	}
+
+	.row {
+		position: relative;
+		z-index: 40;
+		/*background-color: #FFF;*/
+	}
+
+	.bottom-align-text {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	body{
+		/*background-color: blue !important;*/
+	}
+	h2 { 
+		font-size: 24px;
+		font-size: 2.4rem; /* =24px */
+		line-height: 32px;
+		line-height: 3.2rem;
+	}
+	h3 { 
+		font-size: 16px;
+		font-size: 1.6rem; /* =16px */
+		/*font-height: 100%;*/
+		line-height: 24px;
+		line-height: 2.4rem;
+	}
+	dd {
+		display: inline-block;
+		padding: 0 0 10px 10px;
+		/*float: left;*/
+		max-width: 190px;
+		/*padding-bottom: 10px;*/
+	}
+	#we-are-list{
+		/*max-width: 600px;*/
+	}
+	#we-are-list h2{
+		line-height: 36px;
+		line-height: 3.6rem;
+	}
+	/*#STEAM h1{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 19.0rem;
+		-webkit-text-stroke: 3px #404040;
+	}*/
+
+	.no-textstroke #STEAM h1{
+		/*Fallback border for Firefox/Opera*/
+		text-shadow:
+		-1px -1px 0 #404040,  
+		1px -1px 0 #404040,
+		-1px 1px 0 #404040,
+		1px 1px 0 #404040;
+	}
+
+	#schools h3{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 3.6rem;	
+		text-align: right;
+		line-height: inherit;
+		-webkit-text-stroke: 1.5px #404040;
+	}
+
+	#graphic-gif{
+		background-size: auto 85%;
+	}
+
+	#graphic-text h1{
+		font-size: 15.0rem;
+	}
+
+	#graphic-text h3{
+		font-size: 3.2rem;	
+		top: 85%;
+	}
+
+	.no-textstroke #schools h3{
+		/* Fallback for Firefox/Opera*/
+		text-shadow:
+		-1px -1px 0 #404040,  
+		1px -1px 0 #404040,
+		-1px 1px 0 #404040,
+		1px 1px 0 #404040;
+	}
+
+	.big-number {
+		left: -15px;
+	}
+	.big-number-double {
+		left: -30px;
+	}
+	.fixed-nav li {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.fixed-nav{
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+	.navbar-collapse li{
+		margin: 0;
+	}
+	#fixed-nav-bar{
+		/* No bottom border */
+		border-bottom-style: none;
+	}
+	.logo{
+		width: 65%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*Small*/
+	.img-small{
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*Small*/
+	.img-small{
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	/* Hax for getting bootstrap columns in row to be full height */
+	/* Applied to the shorter column in a row. Parent div (main) must have overflow: hidden; */
+	.match-height-md{
+		margin-bottom: -99999px !important;
+		padding-bottom: 99999px !important;
+		background-color: red !important;
+	}
+
+	.container {
+		width: 970px;
+	}
+	body{
+		/*background-color: yellow !important;*/
+	}
+	h2 { 
+		font-size: 24px;
+		font-size: 2.4rem; /* =24px */
+		line-height: 32px;
+		line-height: 3.2rem;
+	}
+	h3 { 
+		font-size: 16px;
+		font-size: 1.6rem; /* =16px */
+		/*font-height: 100%;*/
+		line-height: 24px;
+		line-height: 2.4rem;
+	}
+	dd {
+		display: inline-block;
+		padding: 0 0 10px 10px;
+		/*float: left;*/
+		max-width: 180px;
+		/*padding-bottom: 10px;*/
+	}
+	#we-are-list{
+		max-width: 600px;
+	}
+	#we-are-list h2{
+		line-height: 36px;
+		line-height: 3.6rem;
+	}
+
+	#schools h3{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 3.6rem;	
+		text-align: right;
+		line-height: inherit;
+		-webkit-text-stroke: 1.5px #404040;
+	}
+
+	#graphic-text h1{
+		font-size: 17.0rem;
+	}
+
+	#graphic-text h3{
+		font-size: 3.2rem;	
+		top: 80%;
+	}
+
+	#graphic-gif{
+		background-size: auto 90%;
+	}
+
+	.no-textstroke #schools h3{
+		/* Fallback for Firefox/Opera*/
+		text-shadow:
+		-1px -1px 0 #404040,  
+		1px -1px 0 #404040,
+		-1px 1px 0 #404040,
+		1px 1px 0 #404040;
+	}
+
+	.big-number {
+		left: -20px;
+	}
+	.big-number-double {
+		left: -35px;
+	}
+	.logo{
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*Md*/
+	.img-small{
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.img-medium{
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+	/* Hax for getting bootstrap columns in row to be full height */
+	/* Applied to the shorter column in a row. Parent div (main) must have overflow: hidden; */
+	.match-height-lg{
+		margin-bottom: -99999px !important;
+		padding-bottom: 99999px !important;
+		background-color: red !important;
+	}
+	.container {
+		width: 1170px;
+	}	
+	body{
+		/*background-color: gray !important;*/
+	}
+	h2 { 
+		font-size: 24px;
+		font-size: 2.4rem; /* =24px */
+		line-height: 32px;
+		line-height: 3.2rem;
+	}
+	h3 { 
+		font-size: 16px;
+		font-size: 1.6rem; /* =16px */
+		line-height: 24px;
+		line-height: 2.4rem;
+	}
+	dd {
+		display: inline-block;
+		padding: 0 0 10px 10px;
+		/*float: left;*/
+		max-width: 250px;
+		/*padding-bottom: 10px;*/
+	}
+	
+
+	.no-textstroke #STEAM h1{
+		/*Fallback border for Firefox/Opera*/
+		text-shadow:
+		-1px -1px 0 #404040,  
+		1px -1px 0 #404040,
+		-1px 1px 0 #404040,
+		1px 1px 0 #404040;
+		
+	}
+
+	#schools h3{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 4rem;	
+		text-align: right;
+		line-height: inherit;
+		-webkit-text-stroke: 1.5px #404040;
+	}
+
+	#graphic-text h1{
+		font-size: 20.0rem;
+	}
+
+	#graphic-text h3{
+		font-size: 3.2rem;	
+		top: 90%;
+	}
+
+	#graphic-gif{
+		background-size: auto 95%;
+	}
+
+	.no-textstroke #schools h3{
+		/* Fallback for Firefox/Opera*/
+		text-shadow:
+		-1px -1px 0 #404040,  
+		1px -1px 0 #404040,
+		-1px 1px 0 #404040,
+		1px 1px 0 #404040;
+	}
+	.full{
+		margin: 0;
+		padding: 0;
+		z-index: 50;
+		background-color: #FFF;
+	}
+	.big-number {
+		left: -25px;
+	}
+	.big-number-double {
+		left: -40px;
+	}
+	.img-right{
+		padding-left: 20px;
+		padding-right: 50px;
+		width: 90%;
+	}
+
+	.logo{
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*Lg*/
+	.img-small{
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.img-medium{
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+
+/**********************
+Arrow Bouncing 
+**********************/
+
+.arrow {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left:-20px;
+}
+
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+.animated{-webkit-animation-fill-mode:both;
+-moz-animation-fill-mode:both;
+-ms-animation-fill-mode:both;
+-o-animation-fill-mode:both;
+
+            animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+animation-fill-mode:both;
+-webkit-animation-duration:2s;
+-moz-animation-duration:2s;
+-ms-animation-duration:2s;
+-o-animation-duration:2s;
+animation-duration:2s;
+}
+
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+
+/***********************************
+SPIROGRAPH CANVAS: htmlspirograph.com
+***********************************/
+			#header {
+				text-align: left;
+				margin: 0;
+				/*color: #BBB;*/
+				background: transparent;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 14px;
+				-webkit-text-size-adjust: none;
+				z-index: 50;
+			}
+			canvas {
+				position: absolute; 
+				top: 0;
+				left: 0;
+			}
+			#buffer {
+				display: none;
+				overflow: visible;
+				z-index: 50;
+				 -webkit-user-select: none;  /* Chrome all / Safari all */
+			  -moz-user-select: none;     /* Firefox all */
+			  -ms-user-select: none;      /* IE 10+ */	
+			}
+			#canvas-wrapper {
+				/*position: relative;
+				width: 960px;
+				height: 960px;
+				margin: 0 auto;*/
+				position: absolute;
+				top: 0px;
+				left: 410px;
+				right: 0px;
+				bottom: 0px;
+				overflow: visible;
+				background: transparent;
+				-webkit-user-select: none;  /* Chrome all / Safari all */
+			  -moz-user-select: none;     /* Firefox all */
+			  -ms-user-select: none;      /* IE 10+ */	
+			}
+			#screen {
+				overflow: hidden;
+				min-width: 100%;
+				min-height: 100%;
+			}
+			
+			
+/**********************************
+bomomo.com
+**********************************/
+.app {
+    position: relative;
+    width: /*1000px;*/ 100%;
+    height: 100%;
+    /*margin-left: auto;*/
+	position: align-left;
+    margin-right: auto;
+}
+
+.app p.note {
+    margin-top: 120px;
+    margin: 40px;
+    font-weight: bold;
+    color: #855;
+    text-align: center;
+}
+
+
+.canvas {
+    position: absolute;
+    display: block;
+    /*left: 10px;*/
+    /*top: 10px;*/
+    /*border: 1px solid #bbb;*/
+    overflow: visible;
+    width: 100%;
+    height: 2500px;
+}
+
+#canvasBackground1,
+#canvasBackground {
+    z-index: 1;
+    background-color: transparent;
+}
+
+#canvasForeground1,
+#canvasForeground {
+    z-index: 20;
+    background-color: transparent;
+}
+
+#canvasClickarea1,
+#canvasClickarea {
+    z-index: 30;
+    background-color: transparent;
+}
+
+#debug,
+#debug2 {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+    padding: 2px;
+    font-family: monospace;
+    height: 22px;
+    overflow: hidden;
+}
+
+#debug2 {
+    top: 45px;
+    background-color: #eee;
+    display: none;
+}			
+
+/************
+Video/Image School Headers 
+***********/
+
+#header .bg-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*background: #1A76BB url("../img/yale/beyondBoundariesRountable.jpg") no-repeat;
+  background-color: #1A76BB;*/
+  opacity: 0.8;
+  background-position: 0px 0px;
+  background-size: cover;
+  /*background-repeat: no-repeat;*/
+}
+
+#header .overlay {
+  color: #1A76BB;
+  opacity: 1;
+}
+
+.clear-image {
+  display: none;
+}
+
+.clear-image.video {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  height: 100%;
+}
+
+.bg-container .h1 {
+  position: absolute;
+  left: 0px;
+  top: 40%;
+  right: 0px;
+  margin-top: 0px;
+  font-family: Lato, sans-serif;
+  color: #FFF;
+  font-weight: 100;
+  text-align: center;
+}
+
+/*******************
+School img hover 
+*******************/
+.color-overlay { 
+	background: #D3D3D3;
+ }
+.color-overlay.RISD { 
+	background: #737373;
+ }
+.color-overlay.Brown { 
+	background: #EC1C24;
+ }
+.color-overlay.MIT { 
+	background: #24A8B3;
+ }
+.color-overlay.Yale { 
+	background: #1A76BB;
+ }
+.color-overlay.Rutgers { 
+	background: #6048a8;
+ }
+.color-overlay.UCBerkeley{ 
+	background: #CF66C1;
+ }
+.color-overlay.BU{ 
+	background: #0ba016;
+ } 
+.color-overlay.Harvard{ 
+	background: #fcc342;
+ } 
+.color-overlay.New{ 
+	background: #f77116;
+ }  
+.color-overlay.UMichigan{ 
+	background: #B3C100;
+} 
+.color-overlay.UOttawa{ 
+	background: #C60967;
+}  
+.color-overlay:hover img { 
+	opacity: 0.7;
+ }
