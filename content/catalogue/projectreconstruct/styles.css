@@ -1,0 +1,153 @@
+
+/*
+Rules/Guidlines
+
+Typography
+Clickable: Sans Serif
+Content: Serif (GT Sectra)
+
+Colour
+-Navy blue and Beige
+-School colour
+-Only differenciate with opacity, not hex code
+
+
+
+*/
+
+
+
+body {
+    font-family: "GT Sectra";
+    
+}
+
+
+
+
+/*Landing Page*/
+
+.landing_page {
+    background: blue;
+    
+}
+
+/*Palette Cleansers*/
+.palette001 {}
+.palette002 {}
+.palette003 {}
+.palette004 {}
+.palette005 {}
+.palette006 {}
+.palette007 {}
+.palette008 {}
+.palette009 {}
+.palette010 {}
+
+
+
+/*Last Page*/
+
+.ending_page {}
+
+
+
+
+/*Typography Size Treatment*/
+/*School names*/
+h1 {
+    font-family: "GT Sectra Display";
+    font-size: 62pt;
+    font-style: bold;
+    margin-left: 400px;
+}
+/*Article Title*/
+h2 {
+    font-family: "GT Sectra Display";
+    font-size: 62pt;
+    margin-left: 400px;
+}
+/*disclaimer/subheading/intro*/
+h3 {
+    font-size: 32pt;
+    margin-left: 400px;
+}
+/*byline*/
+h4 {
+    font-size: 18pt;
+    font-style: oblique;
+    text-align: left;
+    margin-left: 400px;
+}
+/*nav*/
+h5 {
+    font-size: 18pt;
+    margin-left: 50px;
+    font-family: "GT America";
+    font-style: Condensed;
+    
+}
+/*Body*/
+p {
+    font-size: 14pt;
+    font-style:normal;
+    line-height: 17.7pt;
+    widows: inherit;
+    width: 650px;
+    margin-left: 400px;
+}
+
+
+/*School Headers*/
+
+.risd {
+    color: black;
+}
+.brown {
+    color: red;
+}
+.rutgers {
+    color: purple;
+}
+.bu {
+    color: green;
+}
+.harvard {
+    color: yellow;
+}
+.yale {
+    color: blue;
+}
+.parsons {
+    color: orange;
+}
+.uottawa{
+    color: blueviolet;
+}
+.umich{
+    color: brown;
+}
+.berkely{
+    color: plum;
+}
+.uga{
+    color: deeppink;
+}
+
+
+
+/*Table of Contents*/
+.tableofcontents_risd {}
+.tableofcontents_brown {}
+.tableofcontents_bu {}
+.tableofcontents_rutgers {}
+.tableofcontents_parsons {}
+.tableofcontents_umich {}
+.tableofcontents_berkely {}
+.tableofcontents_harvard {}
+.tableofcontents_yale {}
+.tableofcontents_uttawa {}
+.tableofcontents_uga {}
+
+
+/*Images*/
