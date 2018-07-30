@@ -33,12 +33,22 @@ body {
     margin: 0px;
 }
 
-/*Landing Page*/
+/* Landing Page */
 
 .landing_page {
     margin-top: 0px;
     padding: 100px;
     background-color: #00395A; /* dark blue */
+    color: #FCFCFA; /* beige */
+    height: 500px;
+}
+
+/* Editor's Note */
+.editor_note {
+    padding: 20px;
+    padding-top: 50px;
+    margin-top: 0px;
+    background-color: black; /* dark blue */
     color: #FCFCFA; /* beige */
     height: 500px;
 }
@@ -64,12 +74,14 @@ body {
     margin: 10px;
 }
 
+/* tablet and above */
 @media only screen and (min-width: 800px) {
     .content {
         margin: auto;
     }
 }
 
+/* desktop and above */
 @media only screen and (min-width: 1200px) {
     .content {
         margin-left: 400px;
