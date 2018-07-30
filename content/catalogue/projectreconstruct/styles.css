@@ -11,25 +11,31 @@ Colour
 -School colour
 -Only differenciate with opacity, not hex code
 
-
-
 */
 
-
-
-body {
-    font-family: "GT Sectra";
-    
+@font-face {
+    font-family: 'GT Sectra Super';
+    src: url(fonts/GT-Sectra-Display-Super.otf);
 }
 
+@font-face {
+    font-family: 'GT Sectra Book';
+    src: url(fonts/GT-Sectra-Book.otf);
+}
 
+@font-face {
+    font-family: 'GT Sectra Bold Italic';
+    src: url(fonts/GT-Sectra-Bold-Italic.otf);
+}
 
+body {
+    font-family: "GT Sectra Book";
+}
 
 /*Landing Page*/
 
 .landing_page {
     background: blue;
-    
 }
 
 /*Palette Cleansers*/
@@ -44,59 +50,78 @@ body {
 .palette009 {}
 .palette010 {}
 
-
-
 /*Last Page*/
 
 .ending_page {}
 
+.content {
+    max-width: 650px;
+}
 
+@media only screen and (min-width: 600px) {
+    .content {
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .content {
+        margin-left: 400px;
+    }
+}
 
 
 /*Typography Size Treatment*/
 /*School names*/
 h1 {
-    font-family: "GT Sectra Display";
+    font-family: "GT Sectra Super";
     font-size: 62pt;
-    font-style: bold;
-    margin-left: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 /*Article Title*/
 h2 {
-    font-family: "GT Sectra Display";
+    font-family: "GT Sectra Super";
     font-size: 62pt;
-    margin-left: 400px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
+
 /*disclaimer/subheading/intro*/
 h3 {
+    font-family: "GT Sectra Book";
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 20px;
     font-size: 32pt;
-    margin-left: 400px;
 }
+
 /*byline*/
 h4 {
+    font-family: "GT Sectra Bold Italic";
     font-size: 18pt;
-    font-style: oblique;
     text-align: left;
-    margin-left: 400px;
 }
+
 /*nav*/
 h5 {
     font-size: 18pt;
     margin-left: 50px;
     font-family: "GT America";
     font-style: Condensed;
-    
+
 }
+
 /*Body*/
 p {
+    font-family: "GT Sectra Book";
     font-size: 14pt;
     font-style:normal;
     line-height: 17.7pt;
     widows: inherit;
-    width: 650px;
-    margin-left: 400px;
 }
-
 
 /*School Headers*/
 
