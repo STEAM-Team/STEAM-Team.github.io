@@ -36,11 +36,11 @@ body {
 /* Landing Page */
 
 .landing_page {
+    padding: 20px;
     margin-top: 0px;
-    padding: 100px;
     background-color: #00395A; /* dark blue */
     color: #FCFCFA; /* beige */
-    height: 500px;
+    min-height: 500px;
 }
 
 /* Editor's Note */
@@ -50,7 +50,7 @@ body {
     margin-top: 0px;
     background-color: black; /* dark blue */
     color: #FCFCFA; /* beige */
-    height: 500px;
+    min-height: 500px;
 }
 
 /*Palette Cleansers*/
@@ -78,6 +78,9 @@ body {
 @media only screen and (min-width: 800px) {
     .content {
         margin: auto;
+    }
+    .landing_page {
+        padding: 100px;
     }
 }
 
