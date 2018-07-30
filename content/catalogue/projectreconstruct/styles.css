@@ -30,12 +30,17 @@ Colour
 
 body {
     font-family: "GT Sectra Book";
+    margin: 0px;
 }
 
 /*Landing Page*/
 
 .landing_page {
-    background: blue;
+    margin-top: 0px;
+    padding: 100px;
+    background-color: #00395A; /* dark blue */
+    color: #FCFCFA; /* beige */
+    height: 500px;
 }
 
 /*Palette Cleansers*/
@@ -55,10 +60,11 @@ body {
 .ending_page {}
 
 .content {
-    max-width: 650px;
+    max-width: 700px;
+    margin: 10px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
     .content {
         margin: auto;
     }
