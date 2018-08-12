@@ -34,7 +34,6 @@ body {
 }
 
 /* Landing Page */
-
 .landing_page {
     padding: 20px;
     margin-top: 0px;
@@ -48,9 +47,42 @@ body {
     padding: 20px;
     padding-top: 50px;
     margin-top: 0px;
-    background-color: black; /* dark blue */
+    background-color: black;
     color: #FCFCFA; /* beige */
     min-height: 500px;
+}
+
+/* Table of Contents */
+.table_of_contents {
+    padding: 20px;
+    background-color:  #00395A; /* dark blue */
+    color: #FCFCFA; /* beige */
+    min-height: 500px;
+}
+
+.table_of_contents_expanded {
+    padding: 0px 50px 50px 50px;
+
+}
+
+.table_of_contents_expanded li {
+    line-height: 2em;
+}
+
+.table_of_contents_expanded a {
+    color: #FCFCFA; /* beige */
+}
+
+/*Articles*/
+
+.article {
+    padding-top: 32px;
+}
+
+.image {
+    background-color: red;
+    height: 300px;
+    width: 100%;
 }
 
 /*Palette Cleansers*/
@@ -71,14 +103,21 @@ body {
 
 .content {
     max-width: 700px;
-    margin: 10px;
+    padding: 20px;
 }
 
 /* tablet and above */
 @media only screen and (min-width: 800px) {
     .content {
+        padding: 30px;
         margin: auto;
     }
+
+    .table_of_contents_expanded {
+        column-count: 2;
+        column-gap: 32px;
+    }
+
     .landing_page {
         padding: 100px;
     }
@@ -86,8 +125,9 @@ body {
 
 /* desktop and above */
 @media only screen and (min-width: 1200px) {
-    .content {
-        margin-left: 400px;
+    .image {
+        width: 120%;
+        margin-left: -10%;
     }
 }
 
@@ -104,7 +144,7 @@ h1 {
 /*Article Title*/
 h2 {
     font-family: "GT Sectra Super";
-    font-size: 62pt;
+    font-size: 50pt;
     margin-top: 20px;
     margin-bottom: 10px;
 }
