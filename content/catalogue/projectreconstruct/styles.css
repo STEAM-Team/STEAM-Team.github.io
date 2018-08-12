@@ -33,6 +33,10 @@ body {
     margin: 0px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Landing Page */
 .landing_page {
     padding: 20px;
