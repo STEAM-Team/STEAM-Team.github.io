@@ -31,6 +31,8 @@ Colour
 body {
     font-family: "GT Sectra Book";
     margin: 0px;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .hidden {
@@ -80,12 +82,15 @@ body {
 /*Articles*/
 
 .article {
-    padding-top: 32px;
+    padding-top: 64px;
 }
 
 .image {
-    background-color: red;
-    height: 300px;
+    width: 110%;
+    margin-left: -5%;
+}
+
+img {
     width: 100%;
 }
 
@@ -184,7 +189,7 @@ p {
     font-family: "GT Sectra Book";
     font-size: 14pt;
     font-style:normal;
-    line-height: 17.7pt;
+    line-height: 19.7pt;
     widows: inherit;
 }
 
