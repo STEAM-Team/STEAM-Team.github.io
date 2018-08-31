@@ -39,6 +39,26 @@ body {
     display: none;
 }
 
+/* Navbar */
+.nav {
+    height: 64px;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    color: #FCFCFA;
+    padding-left: 24px;
+}
+
+.nav_buffer {
+    height: 64px;
+    background-color: black;
+}
+
+.nav_title {
+    margin-top: 0px;
+    padding-top:24px;
+}
+
 /* Landing Page */
 .landing_page {
     padding: 20px;
@@ -189,7 +209,7 @@ p {
     font-family: "GT Sectra Book";
     font-size: 14pt;
     font-style:normal;
-    line-height: 19.7pt;
+    line-height: 20pt;
     widows: inherit;
 }
 
