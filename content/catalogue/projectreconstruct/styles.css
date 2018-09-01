@@ -46,7 +46,6 @@ body {
     position: fixed;
     background-color: black;
     color: #FCFCFA;
-    padding-left: 24px;
 }
 
 .nav_buffer {
@@ -56,7 +55,10 @@ body {
 
 .nav_title {
     margin-top: 0px;
-    padding-top:24px;
+    font-size: 20pt;
+    padding-top: 24px;
+    font-family: 'GT Sectra Super';
+    text-align: center;
 }
 
 /* Landing Page */
