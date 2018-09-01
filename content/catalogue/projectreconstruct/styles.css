@@ -105,6 +105,7 @@ body {
 
 .article {
     padding-top: 64px;
+    padding-bottom: 32px;
 }
 
 .image {
@@ -160,8 +161,26 @@ img {
         width: 120%;
         margin-left: -10%;
     }
-}
 
+    .article h2 {
+        width: 110.5%;
+        margin-left: -10%;
+        border: solid 2px;
+        padding: 32px 32px 16px 32px;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .article h3 {
+        text-align: right;
+        width: 110.5%;
+        margin-left: -10%;
+        border: solid 2px;
+        margin-top: 0;
+        padding: 32px 32px 20px 32px;
+        margin-bottom: 64px;
+    }
+}
 
 /*Typography Size Treatment*/
 /*School names*/
@@ -176,6 +195,7 @@ h1 {
 h2 {
     font-family: "GT Sectra Super";
     font-size: 50pt;
+    line-height: 1.1em;
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -209,9 +229,9 @@ h5 {
 /*Body*/
 p {
     font-family: "GT Sectra Book";
-    font-size: 14pt;
+    font-size: 16pt;
     font-style:normal;
-    line-height: 20pt;
+    line-height: 24pt;
     widows: inherit;
 }
 
