@@ -29,6 +29,7 @@ Colour
 }
 
 body {
+    background-color: #FCFCFA;
     font-family: "GT Sectra Book";
     margin: 0px;
     word-break: break-word;
@@ -45,7 +46,7 @@ body {
     width: 100%;
     position: fixed;
     background-color: black;
-    color: #FCFCFA;
+    color: #FCFCFA; /* beige */
 }
 
 .nav_buffer {
@@ -111,6 +112,15 @@ body {
 .image {
     width: 110%;
     margin-left: -5%;
+}
+
+.drop_cap:first-letter {
+    float: left;
+    padding-top: 16px;
+    padding-right: 4px;
+    font-family: 'GT Sectra Super';
+    font-size: 64px;
+    line-height: 40px;
 }
 
 img {
