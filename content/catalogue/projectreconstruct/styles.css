@@ -29,7 +29,7 @@ Colour
 }
 
 body {
-    background-color: #FCFCFA;
+    background-color: #FEEFEA; /* orange-pink */
     font-family: "GT Sectra Book";
     margin: 0px;
     word-break: break-word;
@@ -46,7 +46,7 @@ body {
     width: 100%;
     position: fixed;
     background-color: black;
-    color: #FCFCFA; /* beige */
+    color: #FEEFEA; /* orange-pink */
 }
 
 .nav_buffer {
@@ -107,6 +107,7 @@ body {
 .article {
     padding-top: 64px;
     padding-bottom: 32px;
+    background-size: 100%
 }
 
 .image {
