@@ -149,55 +149,11 @@ img {
     padding: 20px;
 }
 
-/* tablet and above */
-@media only screen and (min-width: 800px) {
-    .content {
-        padding: 30px;
-        margin: auto;
-    }
-
-    .table_of_contents_expanded {
-        column-count: 2;
-        column-gap: 64px;
-    }
-
-    .landing_page {
-        padding: 100px;
-    }
-}
-
-/* desktop and above */
-@media only screen and (min-width: 1200px) {
-    .image {
-        width: 120%;
-        margin-left: -10%;
-    }
-
-    .article h2 {
-        width: 110.5%;
-        margin-left: -10%;
-        border: solid 2px;
-        padding: 32px 32px 16px 32px;
-        border-bottom: none;
-        margin-bottom: 0;
-    }
-
-    .article h3 {
-        text-align: right;
-        width: 110.5%;
-        margin-left: -10%;
-        border: solid 2px;
-        margin-top: 0;
-        padding: 32px 32px 20px 32px;
-        margin-bottom: 64px;
-    }
-}
-
 /*Typography Size Treatment*/
 /*School names*/
 h1 {
     font-family: "GT Sectra Super";
-    font-size: 62pt;
+    font-size: 50pt;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -205,7 +161,7 @@ h1 {
 /*Article Title*/
 h2 {
     font-family: "GT Sectra Super";
-    font-size: 50pt;
+    font-size: 40pt;
     line-height: 1.1em;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -218,7 +174,7 @@ h3 {
     font-weight: normal;
     margin-top: 5px;
     margin-bottom: 20px;
-    font-size: 32pt;
+    font-size: 28pt;
 }
 
 /*byline*/
@@ -240,14 +196,14 @@ h5 {
 /*Body*/
 p {
     font-family: "GT Sectra Book";
-    font-size: 16pt;
+    font-size: 14pt;
     font-style:normal;
     line-height: 24pt;
     widows: inherit;
 }
 
 li {
-    font-size: 16pt;
+    font-size: 14pt;
 }
 
 /*School Headers*/
@@ -303,3 +259,106 @@ li {
 
 
 /*Images*/
+
+
+/* tablet and above */
+@media only screen and (min-width: 800px) {
+    .content {
+        padding: 30px;
+        margin: auto;
+    }
+
+    .table_of_contents_expanded {
+        column-count: 2;
+        column-gap: 64px;
+    }
+
+    .landing_page {
+        padding: 100px;
+    }
+
+    /*Typography Size Treatment*/
+    /*School names*/
+    h1 {
+        font-family: "GT Sectra Super";
+        font-size: 62pt;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /*Article Title*/
+    h2 {
+        font-family: "GT Sectra Super";
+        font-size: 50pt;
+        line-height: 1.1em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /*disclaimer/subheading/intro*/
+    h3 {
+        font-family: "GT Sectra Book";
+        font-style: normal;
+        font-weight: normal;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 32pt;
+    }
+
+    /*byline*/
+    h4 {
+        font-family: "GT Sectra Bold Italic";
+        font-size: 18pt;
+        text-align: left;
+    }
+
+    /*nav*/
+    h5 {
+        font-size: 18pt;
+        margin-left: 50px;
+        font-family: "GT America";
+        font-style: Condensed;
+
+    }
+
+    /*Body*/
+    p {
+        font-family: "GT Sectra Book";
+        font-size: 16pt;
+        font-style:normal;
+        line-height: 24pt;
+        widows: inherit;
+    }
+
+    li {
+        font-size: 16pt;
+    }
+}
+
+/* desktop and above */
+@media only screen and (min-width: 1200px) {
+    .image {
+        width: 120%;
+        margin-left: -10%;
+    }
+
+    .article h2 {
+        width: 110.5%;
+        margin-left: -10%;
+        border: solid 2px;
+        padding: 32px 32px 16px 32px;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .article h3 {
+        text-align: right;
+        width: 110.5%;
+        margin-left: -10%;
+        border: solid 2px;
+        margin-top: 0;
+        padding: 32px 32px 20px 32px;
+        margin-bottom: 64px;
+    }
+}
+
