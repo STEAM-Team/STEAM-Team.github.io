@@ -64,11 +64,19 @@ body {
 
 /* Landing Page */
 .landing_page {
-    padding: 20px;
     margin-top: 0px;
-    background-color: #00395A; /* dark blue */
+    background-color: #000; /* dark blue */
     color: #FCFCFA; /* beige */
     min-height: 500px;
+}
+
+.cover_photo {
+    background-image: url('Reconstruct_Catalogue_cover2.png');
+    margin: auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 700px;
 }
 
 /* Editor's Note */
@@ -274,7 +282,7 @@ li {
     }
 
     .landing_page {
-        padding: 100px;
+        padding-top: 50px;
     }
 
     /*Typography Size Treatment*/
