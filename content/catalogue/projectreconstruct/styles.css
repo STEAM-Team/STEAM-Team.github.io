@@ -201,6 +201,10 @@ h5 {
 
 }
 
+.italic {
+  font-family: 'GT Sectra Bold Italic';
+}
+
 /*Body*/
 p {
     font-family: "GT Sectra Book";
