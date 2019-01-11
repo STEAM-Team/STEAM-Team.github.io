@@ -28,12 +28,18 @@ Colour
     src: url(fonts/GT-Sectra-Bold-Italic.otf);
 }
 
+@font-face {
+    font-family: 'GT America Medium';
+    src: url(fonts/GT-America-Condensed-Medium.otf);
+}
+
 body {
     background-color: #FEEFEA; /* orange-pink */
     font-family: "GT Sectra Book";
     margin: 0px;
     word-break: break-word;
     hyphens: auto;
+    
 }
 
 .hidden {
@@ -47,6 +53,7 @@ body {
     position: fixed;
     background-color: black;
     color: #FEEFEA; /* orange-pink */
+    -webkit-font-smoothing: antialiased;
 }
 
 .nav_buffer {
@@ -85,8 +92,18 @@ body {
     padding-top: 50px;
     margin-top: 0px;
     background-color: black;
-    color: #FCFCFA; /* beige */
+    color: #FDFFDF; /* beige */
+    -webkit-font-smoothing: antialiased;
     min-height: 500px;
+}
+
+.editor_note p { 
+    line-height: 20pt;
+}
+
+.editor_note h3 { 
+    font-family: "GT Sectra Super";
+    
 }
 
 /* Table of Contents */
@@ -95,6 +112,7 @@ body {
     background-color:  #00395A; /* dark blue */
     color: #FCFCFA; /* beige */
     min-height: 500px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .table_of_contents_expanded {
