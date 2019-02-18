@@ -1652,7 +1652,7 @@ a {
     color: #0078a0; }
   a img {
     border: none; }
-    
+
 .mainSTEAM a {
   background: #fffd79;
   }
@@ -2339,7 +2339,7 @@ kbd {
   font-size: inherit;
   padding: 0.125rem 0.25rem 0;
   border-radius: 3px; }
-  
+
   /* ====== VISBIBILITY ====== */
 
 /* Small Displays */
@@ -2364,7 +2364,7 @@ kbd {
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px); }
 
-/* Medium Displays */    
+/* Medium Displays */
 @media only screen and (min-width: 40.063em) {
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down {
     display: inherit !important; }
